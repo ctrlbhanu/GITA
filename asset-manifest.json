@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.0005c42c.css",
-    "main.js": "/static/js/main.5255564d.js",
-    "static/media/Space.mp4": "/static/media/Space.0b56c10630d5baf149c9.mp4",
-    "static/media/contactus.png": "/static/media/contactus.c9693dd7ba8c52b5f0a8.png",
-    "static/media/KalaHer.png": "/static/media/KalaHer.7a23006ded78129e20e4.png",
-    "static/media/Ritva.png": "/static/media/Ritva.dd8c2d2d274aba9abb5d.png",
-    "static/media/about.png": "/static/media/about.5ce3457faff33a982cc0.png",
-    "static/media/LandImg.png": "/static/media/LandImg.51c137e754af534a7cb6.png",
-    "static/media/logo.png": "/static/media/logo.5b5a194c87409cf310ad.png",
-    "static/media/simran.png": "/static/media/simran.ca3506cbe1df27cf5e33.png",
-    "static/media/bhanu.png": "/static/media/bhanu.c1e89145a112333d4689.png",
-    "static/media/sunrise.jpg": "/static/media/sunrise.dd82eb88a92f782bbe19.jpg",
-    "static/media/page-header.jpg": "/static/media/page-header.fd3412329174d44dd714.jpg",
-    "index.html": "/index.html",
-    "main.0005c42c.css.map": "/static/css/main.0005c42c.css.map",
-    "main.5255564d.js.map": "/static/js/main.5255564d.js.map"
+    "main.css": "./static/css/main.509e3f37.css",
+    "main.js": "./static/js/main.a79d1b5e.js",
+    "static/media/Space.mp4": "./static/media/Space.0b56c10630d5baf149c9.mp4",
+    "static/media/contactus.png": "./static/media/contactus.c9693dd7ba8c52b5f0a8.png",
+    "static/media/KalaHer.png": "./static/media/KalaHer.7a23006ded78129e20e4.png",
+    "static/media/Ritva.png": "./static/media/Ritva.dd8c2d2d274aba9abb5d.png",
+    "static/media/about.png": "./static/media/about.5ce3457faff33a982cc0.png",
+    "static/media/LandImg.png": "./static/media/LandImg.51c137e754af534a7cb6.png",
+    "static/media/logo.png": "./static/media/logo.5b5a194c87409cf310ad.png",
+    "static/media/simran.png": "./static/media/simran.ca3506cbe1df27cf5e33.png",
+    "static/media/bhanu.png": "./static/media/bhanu.c1e89145a112333d4689.png",
+    "static/media/sunrise.jpg": "./static/media/sunrise.dd82eb88a92f782bbe19.jpg",
+    "static/media/page-header.jpg": "./static/media/page-header.fd3412329174d44dd714.jpg",
+    "index.html": "./index.html",
+    "main.509e3f37.css.map": "./static/css/main.509e3f37.css.map",
+    "main.a79d1b5e.js.map": "./static/js/main.a79d1b5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0005c42c.css",
-    "static/js/main.5255564d.js"
+    "static/css/main.509e3f37.css",
+    "static/js/main.a79d1b5e.js"
   ]
 }
