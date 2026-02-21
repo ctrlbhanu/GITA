@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.86676422.css",
-    "main.js": "/static/js/main.caa9a076.js",
-    "static/media/Space.mp4": "/static/media/Space.0b56c10630d5baf149c9.mp4",
-    "static/media/contactus.png": "/static/media/contactus.c9693dd7ba8c52b5f0a8.png",
-    "static/media/KalaHer.png": "/static/media/KalaHer.7a23006ded78129e20e4.png",
-    "static/media/Ritva.png": "/static/media/Ritva.dd8c2d2d274aba9abb5d.png",
-    "static/media/about.png": "/static/media/about.5ce3457faff33a982cc0.png",
-    "static/media/LandImg.png": "/static/media/LandImg.51c137e754af534a7cb6.png",
-    "static/media/logo.png": "/static/media/logo.5b5a194c87409cf310ad.png",
-    "static/media/simran.png": "/static/media/simran.ca3506cbe1df27cf5e33.png",
-    "static/media/bhanu.png": "/static/media/bhanu.c1e89145a112333d4689.png",
-    "static/media/page-header.jpg": "/static/media/page-header.fd3412329174d44dd714.jpg",
-    "index.html": "/index.html",
-    "main.86676422.css.map": "/static/css/main.86676422.css.map",
-    "main.caa9a076.js.map": "/static/js/main.caa9a076.js.map"
+    "main.css": "/GITA/static/css/main.8b9bcf56.css",
+    "main.js": "/GITA/static/js/main.bb42b396.js",
+    "static/media/Space.mp4": "/GITA/static/media/Space.0b56c10630d5baf149c9.mp4",
+    "static/media/contactus.png": "/GITA/static/media/contactus.c9693dd7ba8c52b5f0a8.png",
+    "static/media/KalaHer.png": "/GITA/static/media/KalaHer.7a23006ded78129e20e4.png",
+    "static/media/Ritva.png": "/GITA/static/media/Ritva.dd8c2d2d274aba9abb5d.png",
+    "static/media/about.png": "/GITA/static/media/about.5ce3457faff33a982cc0.png",
+    "static/media/LandImg.png": "/GITA/static/media/LandImg.51c137e754af534a7cb6.png",
+    "static/media/logo.png": "/GITA/static/media/logo.5b5a194c87409cf310ad.png",
+    "static/media/simran.png": "/GITA/static/media/simran.ca3506cbe1df27cf5e33.png",
+    "static/media/bhanu.png": "/GITA/static/media/bhanu.c1e89145a112333d4689.png",
+    "static/media/page-header.jpg": "/GITA/static/media/page-header.fd3412329174d44dd714.jpg",
+    "index.html": "/GITA/index.html",
+    "main.8b9bcf56.css.map": "/GITA/static/css/main.8b9bcf56.css.map",
+    "main.bb42b396.js.map": "/GITA/static/js/main.bb42b396.js.map"
   },
   "entrypoints": [
-    "static/css/main.86676422.css",
-    "static/js/main.caa9a076.js"
+    "static/css/main.8b9bcf56.css",
+    "static/js/main.bb42b396.js"
   ]
 }
