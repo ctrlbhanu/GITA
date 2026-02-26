@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/GITA/static/css/main.5a4cb0ce.css",
-    "main.js": "/GITA/static/js/main.7d71dd15.js",
+    "main.css": "/GITA/static/css/main.293074cd.css",
+    "main.js": "/GITA/static/js/main.88838691.js",
     "static/media/Space.mp4": "/GITA/static/media/Space.0b56c10630d5baf149c9.mp4",
     "static/media/contactus.png": "/GITA/static/media/contactus.c9693dd7ba8c52b5f0a8.png",
+    "static/media/Ritva.png": "/GITA/static/media/Ritva.518c88a0426ec3389aeb.png",
     "static/media/KalaHer.png": "/GITA/static/media/KalaHer.7a23006ded78129e20e4.png",
-    "static/media/Ritva.png": "/GITA/static/media/Ritva.dd8c2d2d274aba9abb5d.png",
     "static/media/about.png": "/GITA/static/media/about.5ce3457faff33a982cc0.png",
     "static/media/LandImg.png": "/GITA/static/media/LandImg.51c137e754af534a7cb6.png",
+    "static/media/tanisha.png": "/GITA/static/media/tanisha.652c2134aa1cea24e55b.png",
+    "static/media/simran.png": "/GITA/static/media/simran.bd5eea7e76d806fcc0b9.png",
     "static/media/logo.png": "/GITA/static/media/logo.5b5a194c87409cf310ad.png",
-    "static/media/simran.png": "/GITA/static/media/simran.ca3506cbe1df27cf5e33.png",
     "static/media/bhanu.png": "/GITA/static/media/bhanu.c1e89145a112333d4689.png",
     "static/media/sunrise.jpg": "/GITA/static/media/sunrise.dd82eb88a92f782bbe19.jpg",
     "static/media/page-header.jpg": "/GITA/static/media/page-header.fd3412329174d44dd714.jpg",
     "index.html": "/GITA/index.html",
-    "main.5a4cb0ce.css.map": "/GITA/static/css/main.5a4cb0ce.css.map",
-    "main.7d71dd15.js.map": "/GITA/static/js/main.7d71dd15.js.map"
+    "main.293074cd.css.map": "/GITA/static/css/main.293074cd.css.map",
+    "main.88838691.js.map": "/GITA/static/js/main.88838691.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a4cb0ce.css",
-    "static/js/main.7d71dd15.js"
+    "static/css/main.293074cd.css",
+    "static/js/main.88838691.js"
   ]
 }
