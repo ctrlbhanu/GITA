@@ -1,0 +1,110 @@
+/* --- Main Container --- */
+.team-page-container {
+    background: #ffffff; /* Swapped to pure white */
+    padding: 60px 15px;
+    min-height: 100vh;
+}
+
+/* --- Team Member Cards --- */
+.banner-card-row {
+    background: #0065ff; /* Subtle off-white to stand out from the background */
+    padding: 40px;
+    border-radius: 20px; /* Matched the 20px radius from your other pages */
+    border: 1px solid #eaeaea; /* Light, clean border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft, modern drop shadow */
+    transition: all 0.5s ease;
+
+    /* Keeps cards centered */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* --- Card Hover Effect --- */
+.banner-card-row:hover {
+    background: #28a745 !important; /* Keeps the green highlight */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.2); /* Green-tinted shadow on hover */
+    border-color: #28a745;
+}
+
+/* Turns all text white when the card turns green */
+.banner-card-row:hover .member-name,
+.banner-card-row:hover .member-role,
+.banner-card-row:hover .member-bio,
+.banner-card-row:hover .social-links i {
+    color: #ffffff !important;
+}
+
+/* --- Profile Image Frame --- */
+.banner-img-frame {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 15px;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: border-color 0.5s ease;
+}
+
+.banner-card-row:hover .banner-img-frame {
+    border-color: #ffffff; /* Frame border turns white on hover */
+}
+
+.banner-img-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- Typography --- */
+.member-name {
+    color: #ffffff; /* Changed to pure white for high contrast against blue */
+    font-weight: 700;
+    font-size: 2rem;
+    transition: color 0.5s ease;
+}
+
+.member-role {
+    color: #fdbe33; /* Swapped to your brand Yellow to pop against the blue background */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+}
+
+.member-bio {
+    color: rgba(255, 255, 255, 0.9); /* Off-white for easy reading */
+    line-height: 1.8;
+    font-size: 1.1rem;
+
+    /* Hidden state */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Expands the bio when the card is hovered */
+.banner-card-row:hover .member-bio {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 15px; /* Adds breathing room when it opens */
+}
+
+/* --- Social Icons --- */
+.social-links i {
+    color: #ffffff; /* Changed to white so it is visible on the blue card */
+    transition: all 0.5s ease;
+} /* <-- This closing bracket was missing! */
+
+/* Make the icon turn yellow when specifically hovered */
+.social-links a:hover i {
+    color: #fdbe33 !important;
+    transform: scale(1.1);
+}

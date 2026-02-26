@@ -1,116 +1,172 @@
-.Initiatives{
-    background: linear-gradient(90deg, rgb(1, 24, 54) 11.2%, rgba(0, 37, 84, 0.8) 100.2%);
-    .title{
+.Initiatives {
+    background: #ffffff;
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    /* --- 1. Title Styling --- */
+    .title {
         display: flex;
-        /* flex-direction: row-reverse; */
+        justify-content: center;
+        margin-bottom: 2em;
     }
-    h1{
-        font-family: raleway;
+
+    h1 {
+        font-family: "Raleway", "Montserrat", sans-serif;
         font-weight: 700;
-        font-size: 5em;
-        padding-bottom: 0.6em;
-        color: #CECECE;
-        white-space: nowrap;
-        transform: translateX(30px);
-        -webkit-transform: translateX(30px);
-    }
-    .initiative-cards{
-        display: block;
-        margin-left: auto;  
-        margin-right: auto;
-        width: 80%;
-        height: 32vw;
-        img{
-            cursor: pointer;
+        font-size: 4.5em;
+        padding-bottom: 0.2em;
+        color: #111111;
+        text-align: center;
+        margin: 0;
+
+        span {
+            color: #0065ff;
         }
     }
-    .arrows{
+
+    /* --- 2. Carousel Container --- */
+    .initiative-cards {
         width: 100%;
-        padding-bottom: 3em;
-        display: flex;
-        margin-top: 1em;
-        justify-content: center;
-        svg{
-            color:#FDBE33;
-            margin-left: 2em;
-            margin-right: 2em;
+        max-width: 1200px;
+        height: 500px; /* Adjusted for taller image */
+        margin: 0 auto 40px auto;
+
+        img {
             cursor: pointer;
-            &:hover{
-                color: #CECECE;
-                scale: 1.1;
+
+            /* 1. EXACT IMAGE WIDTH */
+            width: 800px;
+            height: 420px;
+            object-fit: cover;
+
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
             }
         }
     }
-    .css-1qzevvg{
+
+    /* --- 3. Initiative Details Text Box --- */
+    .initiative-details {
+        width: 90%; /* Safety fallback for smaller screens */
+
+        /* 2. MATCH THE IMAGE WIDTH EXACTLY */
+        max-width: 800px;
+
+        margin: 0 auto; /* Centers perfectly under the image */
+
+        background: #fdfdfd;
+        border: 1px solid #eaeaea;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+        h2.text-success,
+        h4.text-success {
+            color: #28a745 !important;
+            font-weight: 700;
+        }
+
+        h5.text-primary {
+            color: #0065ff !important;
+            font-weight: 600;
+        }
+
+        .about-text-body {
+            color: #555555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .text-primary.fw-bold {
+            color: #0065ff !important;
+        }
+    }
+
+    .css-1qzevvg {
         display: none;
     }
 }
 
-@media only screen 
-and (min-width: 768px)
-and (max-width: 1023px){
-    .Initiatives{
-        h1{
-            padding-bottom: 1em;
-            span{
-                display: none;
+/* ========================================= */
+/* ========== RESPONSIVE DESIGN ============ */
+/* ========================================= */
+
+@media only screen and (max-width: 1023px) {
+    .Initiatives {
+        h1 {
+            font-size: 3.5em;
+        }
+        .initiative-cards {
+            height: 380px;
+            img {
+                width: 600px; /* Tablet image width */
+                height: 320px;
             }
         }
-        .initiative-cards{
-            width: 80%;
-            height: 43vw;
-        }
-        .arrows{
-            margin-bottom: 10em;
+        .initiative-details {
+            max-width: 600px; /* Matches tablet image width */
+            padding: 40px;
         }
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .Initiatives {
+        padding-top: 100px;
 
-@media only screen
-and (max-width: 767px){
-    .Initiatives{
-        h1{
-            padding-bottom: 0;
+        h1 {
+            font-size: 2.5em;
+            span {
+                display: inline;
+            }
+        }
+
+        .initiative-cards {
+            height: 280px;
+            margin-bottom: 20px;
+            img {
+                width: 90vw; /* Fills 90% of phone screen */
+                height: 220px;
+            }
+        }
+
+        .initiative-details {
+            width: 90vw; /* Matches 90% of phone screen */
+            max-width: none;
+            padding: 25px 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .Initiatives {
+        h1 {
             font-size: 2em;
-            transform: translateX(65px);
-            -webkit-transform: translateX(65px);
-            span{
-                display: none;
+        }
+        .initiative-cards {
+            height: 220px;
+            img {
+                height: 150px;
             }
         }
-        .initiative-cards{
-            width: 10%;
-            height: 63vw;
-        }
-        
     }
 }
-
-@media only screen 
-and (min-width: 351px)
-and (max-width: 400px){
-
-    .Initiatives{
-        h1{
-            font-size: 2em; 
-            transform: translateX(20px);
-            -webkit-transform: translateX(20px);
-        }
-        .arrows{
-            padding-bottom: 1em;
-            margin-top: 0;
-        }
-    } 
+/* Add to the bottom of initiatives.css */
+.fade-in-up {
+    animation: fadeInUp 0.5s ease forwards;
 }
 
-@media only screen 
-and (max-width: 350px){
-    .Initiatives{
-        h1{
-            font-size: 1.5em;
-            transform: translateX(15px);
-            -webkit-transform: translateX(15px);
-        }
-    } 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

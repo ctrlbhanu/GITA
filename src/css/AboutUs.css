@@ -1,0 +1,90 @@
+/* Section Background */
+.about-full-section {
+    background: #ffffff;
+    min-height: 75vh;
+    color: #333333;
+}
+
+/* Image Frame */
+.about-img-frame {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.about-img-frame img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Typography */
+.about-title {
+    color: #111111;
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: #0065ff;
+}
+
+.about-subtitle {
+    color: #0065ff;
+    letter-spacing: 2px;
+}
+
+.about-text-lead {
+    color: #444444;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.about-text-body {
+    color: #666666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Expansion Logic */
+.expanded-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expanded-content.show {
+    max-height: 2500px; /* Large enough for vertical content */
+    opacity: 1;
+    margin-top: 40px;
+}
+
+/* Vertical Content Box */
+.content-inner {
+    background: #fdfdfd;
+    border-radius: 20px;
+    border: 1px solid #eaeaea;
+}
+
+.text-success {
+    color: #0065ff !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.border-secondary {
+    border-color: #eaeaea !important;
+}
+
+.about-btn {
+    border-color: #0065ff;
+    color: #0065ff;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.about-btn:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}

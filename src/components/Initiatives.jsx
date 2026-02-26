@@ -1,100 +1,100 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
-import sudhaar from '../assets/Initiatives/Sudhaar.png';
-import gyaan from '../assets/Initiatives/Gyaan.png';
-import nirmaan from '../assets/Initiatives/Nirmaan.png';
-import gogreen from '../assets/Initiatives/Go-Green.png';
-import muskaan from '../assets/Initiatives/Muskaan.png';
-import '../css/initiatives.css';
+
+// --- Assets & Styles ---
+import ritva from "../assets/Initiatives/Ritva.png";
+import kalaher from "../assets/Initiatives/KalaHer.png";
+import "../css/initiatives.css";
+
+// ==========================================
+// 1. INITIATIVE DATA (Add new projects here!)
+// ==========================================
+const initiativeData = [
+  {
+    key: uuidv4(),
+    image: ritva,
+    title: "Ritva Foundation",
+    subtitle: 'SAFE, SUSTAINABLE, AND "UNPLASTIC" MENSTRUATION',
+    description:
+      "Founded in 2020 by Tanisha Pandit and alumni of Kirori Mal College, the Ritva Foundation is a student-led, non-profit organization dedicated to promoting sustainable, healthy, and stigma-free menstruation across India. We work tirelessly to destigmatize periods, educate communities on reproductive health, and provide biodegradable menstrual products to women in rural areas.",
+    impact: [
+      {
+        bold: "Education & Awareness:",
+        text: "Organizing workshops and educational sessions on critical reproductive health topics, including cervical cancer awareness.",
+      },
+      {
+        bold: "Direct Action:",
+        text: "Hosting regular donation camps to distribute biodegradable and eco-friendly sanitary products to underprivileged women.",
+      },
+      {
+        bold: "Expanding Chapters:",
+        text: "Operating a growing network of active student chapters across the University of Delhi, including Hindu College, Miranda House, and Deshbandhu College.",
+      },
+    ],
+  },
+  // You can easily add KalaHer here later like this:
+  // {
+  //   key: uuidv4(),
+  //   image: kalaher,
+  //   title: "Project KalaHer",
+  //   subtitle: "EMPOWERING WOMEN THROUGH ART",
+  //   description: "...",
+  //   impact: [ ... ]
+  // }
+];
 
 const Initiatives = () => {
-  const isMobile = window.innerWidth <= 768;
+  // ==========================================
+  // 2. STATE MANAGEMENT
+  // ==========================================
   const [card, setCard] = useState({
     goToSlide: 0,
     offsetRadius: 2,
     showNavigation: true,
-    config: config.slow
+    config: config.slow,
   });
 
-  const InCards = [
-    {
-      key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/utkrash/utkarsh.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/aatmabodh/aatmabodh.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    },
-  ].map((slide, index) => {
+  // NEW: State to track if the text box should be visible
+  const [showDetails, setShowDetails] = useState(false);
+
+  // ==========================================
+  // 3. CAROUSEL SLIDES CONFIGURATION
+  // ==========================================
+  const InCards = initiativeData.map((slide, index) => {
     return {
-      ...slide,
+      key: slide.key,
+      content: <img src={slide.image} alt={slide.title} />,
       onClick: () => {
-        if (index === card.goToSlide)
-          window.open(slide.link);
-        setCard({ ...card, goToSlide: index })
-      }
-    }
+        if (index === card.goToSlide) {
+          // If they click the center image, toggle the text box open/closed
+          setShowDetails(!showDetails);
+        } else {
+          // If they click a side image, bring it to center AND open its text
+          setCard({ ...card, goToSlide: index });
+          setShowDetails(true);
+        }
+      },
+    };
   });
 
-  const onRight = () => {
-    setCard({ ...card, goToSlide: card.goToSlide + 1 })
-  }
+  // Find the currently active initiative to display its text
+  const activeInitiative = initiativeData[card.goToSlide];
 
-  const onLeft = () => {
-    setCard({ ...card, goToSlide: card.goToSlide - 1 })
-  }
-
+  // ==========================================
+  // 4. COMPONENT RENDER
+  // ==========================================
   return (
     <div className="Initiatives">
-      <br />
-      <br />
+      {/* --- PAGE TITLE --- */}
       <div className="title">
-        <h1><span>OUR</span> INITIATIVES</h1>
+        <h1>
+          <span>OUR</span> INITIATIVES
+        </h1>
       </div>
+
+      {/* --- 3D CAROUSEL --- */}
       <div className="initiative-cards">
         <Carousel
           slides={InCards}
@@ -105,16 +105,33 @@ const Initiatives = () => {
         />
       </div>
 
-      <div className="arrows">
-        <svg onClick={onLeft} xmlns="http://www.w3.org/2000/svg" width={isMobile?"30":"40"} height={isMobile?"30":"40"} fill="currentColor" className="leftarr bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-        </svg>
-        <svg onClick={onRight} xmlns="http://www.w3.org/2000/svg" width={isMobile?"30":"40"}  height={isMobile?"30":"40"}  fill="currentColor" className="rightarr bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-        </svg>
-      </div>
-    </div>
-  )
-}
+      {/* --- DYNAMIC INITIATIVE DETAILS --- */}
+      {/* Only render this block if showDetails is TRUE */}
+      {showDetails && activeInitiative && (
+        <div className="initiative-details p-4 fade-in-up">
+          {/* Header Section */}
+          <h2 className="text-success mb-2">{activeInitiative.title}</h2>
+          <h5 className="text-primary mb-4" style={{ letterSpacing: "1px" }}>
+            {activeInitiative.subtitle}
+          </h5>
 
-export default Initiatives
+          {/* Main Description */}
+          <p className="about-text-body mb-4">{activeInitiative.description}</p>
+
+          {/* Key Activities & Reach */}
+          <h4 className="text-success mb-3 mt-4">Our Impact & Reach</h4>
+          <ul className="about-text-body list-unstyled">
+            {activeInitiative.impact.map((item, i) => (
+              <li className="mb-3" key={i}>
+                <span className="text-primary fw-bold me-2">—</span>{" "}
+                <strong>{item.bold}</strong> {item.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Initiatives;
