@@ -61,20 +61,7 @@ export default function Navbar() {
                 objectFit: "contain",
               }}
             />
-            <span
-              style={{
-                fontSize: "9px",
-                fontWeight: "500",
-                color: "rgba(255,255,255,0.8)",
-                letterSpacing: "0.5px",
-                marginTop: "2px",
-                textAlign: "center",
-                lineHeight: "1",
-                textTransform: "uppercase",
-              }}
-            >
-              Global Initiative For Transformative Actions
-            </span>
+            <span>Global Initiative For Transformative Actions</span>
           </Link>
 
           <button
