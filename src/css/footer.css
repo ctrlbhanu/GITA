@@ -4,7 +4,7 @@
 .footer {
     position: relative;
     padding-top: 50px;
-    background: rgba(0, 168, 0, 1);
+    background: #003078;
     /* Upward shadow to distinguish from the body */
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -40,7 +40,7 @@
 /* This adds the slide-right and yellow color effect */
 .footer .footer-link a:hover,
 .footer .footer-contact a:hover {
-    color: #0065ff;
+    color: #28a745;
     padding-left: 5px;
 }
 
@@ -53,7 +53,7 @@
 
 /* Makes sure the icons turn yellow when the link is hovered */
 .footer .footer-contact a:hover i {
-    color: #0065ff;
+    color: #28a745;
     transition: 0.3s;
 }
 
@@ -96,7 +96,7 @@
 
 .footer .footer-social a:hover {
     background: #ffffff;
-    color: rgba(0, 168, 0, 1);
+    color: #28a745;
 
     /* Stops the button from sliding right */
     padding-left: 0 !important;
@@ -112,7 +112,7 @@
 .footer .copyright {
     padding: 25px 0;
     /* Changed to match the main footer green */
-    background: rgba(0, 168, 0, 1);
+    background: #003078;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -129,7 +129,7 @@
 }
 
 .footer .copyright p a:hover {
-    color: #0065ff;
+    color: #28a745;
 }
 
 @media (max-width: 767.98px) {
