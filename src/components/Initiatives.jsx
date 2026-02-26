@@ -3,14 +3,9 @@ import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
 
-// --- Assets & Styles ---
 import ritva from "../assets/Initiatives/Ritva.png";
-import kalaher from "../assets/Initiatives/KalaHer.png";
 import "../css/initiatives.css";
 
-// ==========================================
-// 1. INITIATIVE DATA (Add new projects here!)
-// ==========================================
 const initiativeData = [
   {
     key: uuidv4(),
@@ -34,44 +29,30 @@ const initiativeData = [
       },
     ],
   },
-  // You can easily add KalaHer here later like this:
-  // {
-  //   key: uuidv4(),
-  //   image: kalaher,
-  //   title: "Project KalaHer",
-  //   subtitle: "EMPOWERING WOMEN THROUGH ART",
-  //   description: "...",
-  //   impact: [ ... ]
-  // }
 ];
 
 const Initiatives = () => {
-  // ==========================================
-  // 2. STATE MANAGEMENT
-  // ==========================================
   const [card, setCard] = useState({
     goToSlide: 0,
     offsetRadius: 2,
-    showNavigation: true,
+    showNavigation: false,
     config: config.slow,
   });
 
-  // NEW: State to track if the text box should be visible
   const [showDetails, setShowDetails] = useState(false);
 
-  // ==========================================
-  // 3. CAROUSEL SLIDES CONFIGURATION
-  // ==========================================
   const InCards = initiativeData.map((slide, index) => {
     return {
       key: slide.key,
-      content: <img src={slide.image} alt={slide.title} />,
+      content: (
+        <div className="initiative-card-wrapper">
+          <img src={slide.image} alt={slide.title} />
+        </div>
+      ),
       onClick: () => {
         if (index === card.goToSlide) {
-          // If they click the center image, toggle the text box open/closed
           setShowDetails(!showDetails);
         } else {
-          // If they click a side image, bring it to center AND open its text
           setCard({ ...card, goToSlide: index });
           setShowDetails(true);
         }
@@ -79,22 +60,17 @@ const Initiatives = () => {
     };
   });
 
-  // Find the currently active initiative to display its text
   const activeInitiative = initiativeData[card.goToSlide];
 
-  // ==========================================
-  // 4. COMPONENT RENDER
-  // ==========================================
   return (
     <div className="Initiatives">
-      {/* --- PAGE TITLE --- */}
       <div className="title">
-        <h1>
-          <span>OUR</span> INITIATIVES
-        </h1>
+        {/* Removed h1 entirely to save space */}
+        <p className="hint-text">
+          Click on an initiative to explore our impact
+        </p>
       </div>
 
-      {/* --- 3D CAROUSEL --- */}
       <div className="initiative-cards">
         <Carousel
           slides={InCards}
@@ -105,20 +81,15 @@ const Initiatives = () => {
         />
       </div>
 
-      {/* --- DYNAMIC INITIATIVE DETAILS --- */}
-      {/* Only render this block if showDetails is TRUE */}
       {showDetails && activeInitiative && (
         <div className="initiative-details p-4 fade-in-up">
-          {/* Header Section */}
           <h2 className="text-success mb-2">{activeInitiative.title}</h2>
           <h5 className="text-primary mb-4" style={{ letterSpacing: "1px" }}>
             {activeInitiative.subtitle}
           </h5>
 
-          {/* Main Description */}
           <p className="about-text-body mb-4">{activeInitiative.description}</p>
 
-          {/* Key Activities & Reach */}
           <h4 className="text-success mb-3 mt-4">Our Impact & Reach</h4>
           <ul className="about-text-body list-unstyled">
             {activeInitiative.impact.map((item, i) => (
