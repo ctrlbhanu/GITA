@@ -6,7 +6,9 @@
     margin-bottom: 0;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url(../assets/page-header.jpg);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+        url(../assets/page-header.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +17,7 @@
 
 .page-header h2 {
     position: relative;
-    color: #FDBE33;
+    color: #0065ff;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -29,7 +31,7 @@
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #FDBE33;
+    background: #0065ff;
 }
 
 .page-header a {
@@ -40,7 +42,7 @@
 }
 
 .page-header a:hover {
-    color: #FDBE33;
+    color: rgba(0, 168, 0, 1);
 }
 
 .page-header a::after {
@@ -63,11 +65,11 @@
         padding: 60px 0;
         background-attachment: unset;
     }
-    
+
     .page-header h2 {
         font-size: 45px;
     }
-    
+
     .page-header a {
         font-size: 20px;
     }
@@ -77,11 +79,11 @@
     .page-header {
         padding: 45px 0;
     }
-    
+
     .page-header h2 {
         font-size: 35px;
     }
-    
+
     .page-header a {
         font-size: 18px;
     }

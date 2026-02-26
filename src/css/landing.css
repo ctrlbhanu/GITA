@@ -1,115 +1,133 @@
-/* Define a common style for the landing div */
+/**********************************/
+/********** Landing CSS ***********/
+/**********************************/
+
 .landing {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    min-height: 600px; /* Use min-height so it can grow on mobile */
+    background: white;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.left hr {
+    background-color: #0065ff;
+    border: 1px solid #0065ff;
+    height: 1px;
+    margin-right: 0.5em;
+    width: 60%;
+}
+
+.left h4 {
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #0065ff; /* Fixed typo: removed 'green' from hex */
+}
+
+.left .titles {
+    max-width: 700px;
+    margin-left: 80px;
+    margin-top: 7rem;
+}
+
+.left .caption1 {
+    display: flex;
+    align-items: center;
+}
+
+.left .caption2 p {
+    font-size: 2.5rem;
+    font-weight: bold; /* Fixed: font-style bold doesn't exist, use font-weight */
+    color: black;
+    text-transform: uppercase;
+}
+
+.left .caption2 p span {
+    color: #0065ff;
+}
+
+.left .caption3 {
+    max-width: 450px;
+}
+
+.left .caption3 p {
+    font-size: 1.25rem;
+    font-weight: 200;
+    font-style: oblique 40deg;
+    color: black;
+}
+
+.left .btns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+/* --- THE GREEN GLOW BUTTON --- */
+.left .btns .btn-outline-info {
+    color: #0065ff;
+    border-color: #0065ff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.left .btns .btn-outline-info:hover {
+    background-color: rgba(0, 168, 0, 1) !important;
+    border-color: rgba(0, 168, 0, 1) !important;
+    color: white !important;
+    /* This creates the "lighting up" effect */
+    box-shadow: 0 0 20px rgba(0, 168, 0, 0.6);
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right img {
+    width: 700px;
     height: 600px;
-    background: linear-gradient(
-      109.6deg,
-      rgb(1, 24, 54) 11.2%,
-      rgba(0, 37, 84, 0.8) 100.2%
-    );
-    @media (max-width: 767.98px) {
-      flex-direction: column;
+    object-fit: cover;
+}
+
+/**********************************/
+/********** Responsive ************/
+/**********************************/
+
+@media (max-width: 767.98px) {
+    .landing {
+        flex-direction: column;
+        height: auto;
     }
-  }
-  
-  /* Define a style for the left span */
-  .left {
-    flex: 1; /* Allow the left span to grow and shrink as needed */
-    padding: 20px; /* Add some padding around the content */
-    text-align: left; /* Align the text to the left */
-    hr {
-      background-color: yellow;
-      border: 1px solid yellow;
-      height: 1px;
-      margin-right: 0.5em;
-      width: 60%;
-    }
-    h4 {
-      font-size: 1.35rem;
-      font-style: italic;
-      color: yellowgreen;
-    }
-    .titles {
-      max-width: 700px;
-      margin-left: 80px;
-      margin-top: 7rem;
-    }
-    .caption1 {
-      display: flex;
-      align-items: center;
-    }
-    .caption2 {
-      p {
-        font-size: 2.5rem;
-        font-style: bold;
-        color: white;
-        text-transform: uppercase;
-        span {
-          color: yellow;
-        }
-      }
-    }
-    .caption3 {
-      max-width: 450px;
-      p {
-        font-size: 1.25rem;
-        font-weight: 200;
-        font-style: oblique 40deg;
-        color: white;
-      }
-    }
-    .btns {
-      display: flex;
-      justify-content: space-between;
-      max-width: 250px;
-      margin-top: 20px;
-    }
-    @media (max-width: 767.98px) {
-      padding: 5px;
-      hr {
-        width: 20%;
-        border: 0.5px solid yellow;
-      }
-      h4 {
-        font-size: 1rem;
-      }
-      .titles {
-        max-width: 100%;
+
+    .left .titles {
         margin-left: 5px;
-        margin-top: 0.5rem;
-      }
-      .caption2 {
-        p {
-          font-size: 1.5rem;
-        }
-      }
-      .caption3 {
-        max-width: 100%;
-        p {
-          font-size: 0.85rem;
-        }
-      }
-      .btns {
-        max-width: 250px;
-        margin-top: 15px;
-      }
+        margin-top: 1rem;
     }
-  }
-  
-  /* Define a style for the right span */
-  .right {
-    flex: 0; /* Prevent the right span from growing and shrinking */
-    padding: 0; /* Add some padding around the image */
-    img {
-      width: 700px; /* Set the image width to 200px */
-      height: 600px; /* Set the image height to 200px */
+
+    .left hr {
+        width: 20%;
     }
-    @media (max-width: 767.98px) {
-      img {
+
+    .left .caption2 p {
+        font-size: 1.5rem;
+    }
+
+    .left .caption3 p {
+        font-size: 0.85rem;
+    }
+
+    .right img {
         width: 100%;
-        height: 100%;
-      }
+        height: auto;
     }
-  }
+}

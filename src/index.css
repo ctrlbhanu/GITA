@@ -1,40 +1,52 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-  color: #777777;
-  font-weight: 500;
+    margin: 0;
+    /* FIX: Adjust this padding to match your navbar height (usually 70-80px) */
+    /* This prevents the "weird jumping effect" on the live site */
+    padding-top: 0px;
+
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+    color: #777777;
+    font-weight: 500;
+
+    /* Smooths out the transition when scrolling */
+    transition: padding-top 0.3s ease;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html,
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+    /* Ensures anchors scroll to the right spot below the navbar */
+    scroll-padding-top: 80px;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
+
 h1,
-h2, 
-h3, 
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
     color: #4a4c70;
 }
 
 a {
     color: #4a4c70;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 a:hover,
@@ -47,8 +59,8 @@ a:focus {
 
 .btn.btn-custom {
     padding: 12px 20px;
-    text-align: center; 
-   font-size: 16px;
+    text-align: center;
+    font-size: 16px;
     font-weight: 500;
     color: #777777;
     border-radius: 0;
@@ -60,7 +72,7 @@ a:focus {
 }
 
 .btn.btn-custom:hover {
-    color: #20212B;
+    color: #20212b;
     box-shadow: inset 0 0 0 30px #0968a7;
 }
 
@@ -73,9 +85,10 @@ a:focus {
     max-width: 1366px;
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
     font-size: inherit;
     margin-left: 0;
 }
-
