@@ -60,9 +60,14 @@
     display: none;
 }
 
+/* ========================================== */
+/* ========= MOBILE RESPONSIVE FIX ========== */
+/* ========================================== */
+
 @media (max-width: 991.98px) {
     .page-header {
-        padding: 60px 0;
+        /* Pushes the content down 130px on tablet sizes so it clears the logo */
+        padding: 130px 0 60px 0;
         background-attachment: unset;
     }
 
@@ -77,7 +82,8 @@
 
 @media (max-width: 767.98px) {
     .page-header {
-        padding: 45px 0;
+        /* Pushes the content down 120px on phone sizes so it clears the logo */
+        padding: 120px 0 45px 0;
     }
 
     .page-header h2 {

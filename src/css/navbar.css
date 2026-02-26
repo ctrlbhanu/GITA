@@ -17,9 +17,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    /* Keep your grey background */
+    /* Keep your white background */
     background: rgba(255, 255, 255, 1) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softened the shadow slightly */
     border-bottom: none;
     transition: 0.5s;
 }
@@ -41,37 +41,119 @@
     height: auto;
 }
 
-/* 1. Changed Full Form Text to Light Blue */
+/* 1. Changed Full Form Text to Light Blue/Green */
 .navbar .navbar-brand span {
     display: block;
     font-size: 12px;
     font-weight: 900;
     text-transform: capitalize;
     letter-spacing: 1.5px;
-    color: #28a745; /* Light Sky Blue */
+    color: #28a745;
     margin-top: 5px;
     line-height: 1;
     text-align: center;
 }
 
-/* 2. Changed Menu Links to Light Blue */
+/* 2. Changed Menu Links to Brand Blue */
 .navbar-dark .navbar-nav .nav-link {
     color: #0065ff !important;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
 }
 
-/* 3. Changed Active/Hover state to Dark Royal Blue */
+/* 3. Changed Active/Hover state to Green */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #28a745 !important; /* Darker Royal Blue */
+    color: #28a745 !important;
     font-weight: 700; /* Makes it pop more when active */
 }
 
+/* ========================================== */
+/* ========= MOBILE RESPONSIVE FIX ========== */
+/* ========================================== */
+
 @media (max-width: 991.98px) {
+    /* 1. Transparent mobile header at the start */
     .navbar {
         top: 0;
-        background: #20212b !important;
-        padding: 10px;
+        background: transparent !important; /* Changed to transparent */
+        padding: 15px 0;
+        box-shadow: none; /* Removed shadow for the top transparent state */
+    }
+
+    /* 1b. Turns white with a shadow ONLY when scrolled down */
+    .navbar.nav-sticky {
+        background: #ffffff !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 2. Force the container to allow absolute positioning */
+    .navbar .container-fluid {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* perfectly centers the logo */
+    }
+
+    .navbar-brand {
+        margin: 0 auto !important;
+    }
+
+    .navbar .navbar-brand span {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    /* 3. The Hamburger Button - Pinned to the right side */
+    .navbar-toggler {
+        position: absolute;
+        right: 20px;
+        top: 26px; /* Aligns it vertically with the logo */
+        background-color: #0065ff !important; /* Brand Blue Background */
+        border: none;
+        border-radius: 5px;
+        padding: 4px 8px;
+        box-shadow: 0 4px 10px rgba(0, 101, 255, 0.3); /* Soft blue glow */
+    }
+
+    /* Shrinks the actual 3 lines inside the box */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    /* 4. Style the expanded dropdown container */
+    .navbar-collapse {
+        flex-basis: 100%; /* Forces the menu to drop down below the logo */
+        background: #ffffff; /* Forces the menu background to be solid white even if the navbar is transparent */
+        margin-top: 15px;
+        padding: 10px 20px;
+        border-top: 1px solid #eaeaea;
+        border-radius: 12px; /* Added rounded corners so it looks like a clean floating card */
+    }
+
+    /* Make sure links are readable and separated */
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar .navbar-nav .nav-link {
+        color: #333333 !important;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Active & Hover states for mobile */
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+        color: #0065ff !important;
+        background: rgba(0, 101, 255, 0.05);
+        border-radius: 8px;
+        border-bottom: 1px solid transparent;
     }
 }

@@ -30,13 +30,13 @@ export default function Footer() {
               <div className="footer-social">
                 <a
                   className="btn btn-custom"
-                  href="https://www.instagram.com/vitsocials/"
+                  href="https://www.instagram.com/_gitaglobal/"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
                   className="btn btn-custom"
-                  href="https://www.linkedin.com/company/vit-social-welfare-development/"
+                  href="https://www.linkedin.com/company/global-initiative-for-transformative-actions/"
                 >
                   <i className="fab fa-linkedin-in"></i>
                 </a>

@@ -132,20 +132,70 @@
     color: #28a745;
 }
 
+/* ========================================== */
+/* ========= MOBILE RESPONSIVE FIX ========== */
+/* ========================================== */
+
 @media (max-width: 767.98px) {
-    .footer {
-        text-align: center;
+    /* 1. Target ONLY the top container row, ignoring the copyright row */
+    .footer > .container:first-child > .row {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
     }
 
-    /* Center align the contact paragraphs on mobile */
-    .footer .footer-contact a p {
+    /* 2. Force Contact Us & Popular Links to shrink and sit side-by-side */
+    .footer > .container:first-child > .row > div:nth-child(1),
+    .footer > .container:first-child > .row > div:nth-child(2) {
+        flex: 0 0 auto !important; /* Overpowers Bootstrap */
+        width: auto !important;
+        max-width: 48% !important;
+        padding: 0 5px !important;
+        text-align: left !important;
+    }
+
+    /* 3. Force Useful Links to drop below and center */
+    .footer > .container:first-child > .row > div:nth-child(3) {
+        flex: 0 0 100% !important; /* Overpowers Bootstrap */
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-top: 25px !important;
+    }
+
+    /* Centers the individual links inside the Useful Links section */
+    .footer > .container:first-child > .row > div:nth-child(3) .footer-link a {
+        display: flex;
         justify-content: center;
     }
 
+    /* 4. Shrink headers slightly */
+    .footer .footer-contact h2,
+    .footer .footer-link h2,
+    .footer .footer-newsletter h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    /* 5. Keep social icons under Contact Us */
     .footer .footer-social {
-        justify-content: center;
+        justify-content: flex-start !important;
     }
+
+    /* 6. Fix Copyright Centering */
+    .footer .copyright .row {
+        justify-content: center !important;
+    }
+
+    .footer .copyright .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
     .footer .copyright p {
         text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
     }
 }
