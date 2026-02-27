@@ -19,6 +19,7 @@ import SignUp from "./pages/SignUp";
 import Admin from "./pages/Admin";
 import TeamPage from "./pages/TeamPage";
 import Initiatives from "./pages/Initiatives";
+import AdvisoryComit from "./pages/AdvisoryComit";
 
 export default function App() {
   return (
@@ -31,11 +32,11 @@ export default function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/event" element={<Events />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/initiatives" element={<Initiatives />} />
+        <Route path="/advisory" element={<AdvisoryComit />} />
 
         {/* Redirect any unknown path back to Home */}
         <Route path="*" element={<Navigate to="/" />} />

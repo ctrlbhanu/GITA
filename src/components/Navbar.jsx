@@ -125,13 +125,6 @@ export default function Navbar() {
               >
                 Advisory Committee
               </Link>
-              <Link
-                to="/contact"
-                className={`nav-item nav-link ${path === "/contact" ? "active" : ""}`}
-                onClick={closeMenu}
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
         </div>
