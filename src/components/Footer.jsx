@@ -9,22 +9,17 @@ export default function Footer() {
             <div className="footer-contact">
               <h2>Contact Us</h2>
               <a
-                href="https://maps.app.goo.gl/HQg6gMPpAJ445cda6"
+                href="https://maps.app.goo.gl/n45VJKtki6Hye9NU9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa fa-map-marker-alt"></i>address
+                  <i className="fa fa-map-marker-alt"></i>Address
                 </p>
               </a>
-              <a href="tel:+91-7385223242">
+              <a href="mailto:globalita21@gmail.com">
                 <p>
-                  <i className="fa fa-phone"></i>Phone no
-                </p>
-              </a>
-              <a href="mailto:sanjivani.vitswd@vit.edu">
-                <p>
-                  <i className="fa fa-envelope"></i>mail.id
+                  <i className="fa fa-envelope"></i>globalita21@gmail.com
                 </p>
               </a>
               <div className="footer-social">
