@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom"; // Add this import
 import "../css/footer.css";
 
 export default function Footer() {
@@ -14,7 +16,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <p>
-                  <i className="fa fa-map-marker-alt"></i>Address
+                  <i className="fa fa-map-marker-alt"></i>Bhopal, Madhya
+                  Pradesh, India
                 </p>
               </a>
               <a href="mailto:globalita21@gmail.com">
@@ -26,12 +29,16 @@ export default function Footer() {
                 <a
                   className="btn btn-custom"
                   href="https://www.instagram.com/_gitaglobal/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
                   className="btn btn-custom"
                   href="https://www.linkedin.com/company/global-initiative-for-transformative-actions/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
@@ -41,16 +48,16 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Popular Links</h2>
-              <a href="/about">About Us</a>
-              <a href="/contact">Contact Us</a>
-              <a href="/event">Initiatives</a>
+              {/* Changed from <a> to <Link> */}
+              <Link to="/about">About Us</Link>
+              <Link to="/initiatives">Initiatives</Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Useful Links</h2>
-              <a href="#">Terms of use</a>
-              <a href="#">Privacy policy</a>
+              <Link to="#">Terms of use</Link>
+              <Link to="#">Privacy policy</Link>
             </div>
           </div>
         </div>
@@ -59,7 +66,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-6">
             <p>
-              &copy; <a href="#">GITA</a> | 2026, All Right Reserved.
+              © <Link to="/">GITA</Link> | 2026, All Right Reserved.
             </p>
           </div>
         </div>
