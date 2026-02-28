@@ -7,7 +7,7 @@
 
 /* --- Team Member Cards --- */
 .banner-card-row {
-    background: #0065ff; /* Subtle off-white to stand out from the background */
+    background: #000e6e; /* Subtle off-white to stand out from the background */
     padding: 40px;
     border-radius: 20px; /* Matched the 20px radius from your other pages */
     border: 1px solid #eaeaea; /* Light, clean border */
@@ -41,7 +41,7 @@
 .banner-img-frame {
     display: inline-block;
     padding: 10px;
-    border: 2px solid #28a745; /* Green border */
+    border: 2px solid white; /* Green border */
     border-radius: 15px;
     width: 240px;
     height: 240px;
@@ -70,7 +70,12 @@
 }
 
 .member-role {
-    color: #fdbe33; /* Swapped to your brand Yellow to pop against the blue background */
+    color: rgba(
+        255,
+        255,
+        255,
+        0.2
+    ); /* Swapped to your brand white to pop against the blue background */
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -103,8 +108,10 @@
     transition: all 0.5s ease;
 } /* <-- This closing bracket was missing! */
 
-/* Make the icon turn yellow when specifically hovered */
-.social-links a:hover i {
-    color: #fdbe33 !important;
-    transform: scale(1.1);
+/* Make the icon turn yellow when specifically hovered (High Priority) */
+.banner-card-row .social-links a:hover i {
+    color: #0065ff !important;
+    transform: scale(
+        1.2
+    ); /* Bumped the scale slightly so you can really feel the hover */
 }

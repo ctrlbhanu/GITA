@@ -78,7 +78,7 @@ export default function Team() {
                 } text-center mt-3 mt-md-0`}
               >
                 <h3 className="member-name mb-1">{member.name}</h3>
-                <h5 className="member-role text-muted mb-3">{member.role}</h5>
+                <h5 className="member-role  mb-3">{member.role}</h5>
                 <p className="member-bio mb-3">{member.bio}</p>
 
                 <div className="social-links">
