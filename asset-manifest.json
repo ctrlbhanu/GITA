@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GITA/static/css/main.b9f9dc38.css",
+    "main.css": "/GITA/static/css/main.7d6e6d31.css",
     "main.js": "/GITA/static/js/main.a8fc7549.js",
     "static/media/Space.mp4": "/GITA/static/media/Space.17cb1e599d2d651e1922.mp4",
     "static/media/Ritva.png": "/GITA/static/media/Ritva.518c88a0426ec3389aeb.png",
@@ -13,11 +13,11 @@
     "static/media/sunrise.jpg": "/GITA/static/media/sunrise.dd82eb88a92f782bbe19.jpg",
     "static/media/page-header.jpg": "/GITA/static/media/page-header.fd3412329174d44dd714.jpg",
     "index.html": "/GITA/index.html",
-    "main.b9f9dc38.css.map": "/GITA/static/css/main.b9f9dc38.css.map",
+    "main.7d6e6d31.css.map": "/GITA/static/css/main.7d6e6d31.css.map",
     "main.a8fc7549.js.map": "/GITA/static/js/main.a8fc7549.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9f9dc38.css",
+    "static/css/main.7d6e6d31.css",
     "static/js/main.a8fc7549.js"
   ]
 }
