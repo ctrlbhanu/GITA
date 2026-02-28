@@ -4,7 +4,7 @@
 .footer {
     position: relative;
     padding-top: 50px;
-    background: #003078;
+    background: #000e6e;
     /* Upward shadow to distinguish from the body */
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -112,7 +112,7 @@
 .footer .copyright {
     padding: 25px 0;
     /* Changed to match the main footer green */
-    background: #003078;
+    background: #000e6e;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
