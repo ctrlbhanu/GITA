@@ -9,7 +9,7 @@
 .about-img-frame {
     display: inline-block;
     padding: 10px;
-    border: 2px solid #28a745;
+    border: 2px solid #1f8737;
     border-radius: 8px;
     background: #f8f9fa;
 }
@@ -85,6 +85,6 @@
 }
 
 .about-btn:hover {
-    background-color: #28a745;
+    background-color: #1f8737;
     color: #ffffff;
 }

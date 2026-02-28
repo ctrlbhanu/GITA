@@ -3,6 +3,12 @@
 /*******************************/
 .footer {
     position: relative;
+    /* 1. Force the footer to have zero top margin */
+    margin-top: 0;
+
+    /* 2. If the gap is still there, uncomment the line below to physically pull the footer up over the gap */
+    /* margin-top: -5px !important; */
+
     padding-top: 50px;
     background: #000e6e;
     /* Upward shadow to distinguish from the body */

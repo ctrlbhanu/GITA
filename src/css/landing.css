@@ -7,7 +7,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: 600px; /* Use min-height so it can grow on mobile */
-    background: white;
+    background: #ffffff;
 }
 
 .left {
@@ -97,6 +97,8 @@
     width: 700px;
     height: 600px;
     object-fit: cover;
+    /* THIS IS THE FIX FOR THE WHITE GAP */
+    display: block;
 }
 
 /**********************************/
