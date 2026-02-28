@@ -14,9 +14,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Events from "./pages/Events";
-import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
-import Admin from "./pages/Admin";
 import TeamPage from "./pages/TeamPage";
 import Initiatives from "./pages/Initiatives";
 import AdvisoryComit from "./pages/AdvisoryComit";
@@ -33,7 +31,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/event" element={<Events />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/initiatives" element={<Initiatives />} />
         <Route path="/advisory" element={<AdvisoryComit />} />
