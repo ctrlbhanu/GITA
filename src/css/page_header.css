@@ -17,7 +17,7 @@
 
 .page-header h2 {
     position: relative;
-    color: #0065ff;
+    color: #28a745;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -31,7 +31,7 @@
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #0065ff;
+    background: #28a745;
 }
 
 .page-header a {
