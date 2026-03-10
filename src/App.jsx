@@ -19,6 +19,8 @@ import TeamPage from "./pages/TeamPage";
 import Initiatives from "./pages/Initiatives";
 import AdvisoryComit from "./pages/AdvisoryComit";
 import Programme from "./pages/Programme";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/initiatives" element={<Initiatives />} />
         <Route path="/advisory" element={<AdvisoryComit />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
 
         {/* Redirect any unknown path back to Home */}
         <Route path="*" element={<Navigate to="/" />} />

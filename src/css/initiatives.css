@@ -2,7 +2,6 @@
 /* =========== GLOBAL OVERRIDES ============ */
 /* ========================================= */
 
-/* --- FOOTER PUSH FIX --- */
 .footer {
     position: relative !important;
     clear: both !important;
@@ -15,26 +14,24 @@
 
 .Initiatives {
     background: #ffffff;
-    /* Reduced padding significantly to remove the 'desert' of white space */
     padding-top: 60px;
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    min-height: auto; /* Changed from 100vh to remove forced space */
+    min-height: auto;
 
-    /* --- 1. Global Arrow Kill --- */
+    /* Kill Arrows */
     .slick-prev,
     .slick-next,
     .slick-arrow {
         display: none !important;
     }
 
-    /* --- 2. Title & Header Styling --- */
     .title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1em; /* Reduced from 2em */
+        margin-bottom: 1em;
     }
 
     .hint-text {
@@ -45,12 +42,11 @@
         font-family: "Quicksand", sans-serif;
     }
 
-    /* --- 3. Carousel Container --- */
+    /* Carousel Container */
     .initiative-cards {
         position: relative;
         width: 100%;
         max-width: 1200px;
-        /* Lowered height to pull details/footer up */
         height: 450px !important;
         margin: 0 auto 20px auto;
         overflow: hidden;
@@ -64,7 +60,7 @@
             img {
                 cursor: pointer;
                 width: 800px;
-                height: 400px; /* Adjusted to fit the new height */
+                height: 400px;
                 object-fit: cover;
                 border-radius: 15px;
                 box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -78,41 +74,96 @@
         }
     }
 
-    /* --- 4. Initiative Details Text Box (Animations) --- */
+    /* --- 4. Initiative Details (Big Box styling REMOVED) --- */
     .initiative-details {
         width: 90%;
-        max-width: 800px;
-        margin: 0 auto 30px auto;
-        background: #fdfdfd;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        max-width: 900px; /* Slightly wider for the grid */
+        margin: 0 auto;
+        background: transparent; /* Removed big background box */
         position: relative;
         z-index: 5;
 
-        /* THE ANIMATION LOGIC (HIDDEN STATE) */
+        /* HIDDEN STATE */
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        padding: 0 40px; /* Vertical padding is 0 so it hides completely */
-        border: 1px solid transparent; /* Hide border when closed */
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* THE EXPANDED STATE (Triggered via React) */
+    /* EXPANDED STATE */
     .initiative-details.show {
-        max-height: 2500px; /* Large enough for content */
+        max-height: 4000px;
         opacity: 1;
-        padding: 40px; /* Restore vertical padding */
-        border-color: #eaeaea; /* Restore border */
-        margin-top: 20px;
+        margin-top: 30px;
+        padding-bottom: 50px;
     }
 
-    /* --- 5. Typography & Elements --- */
     .colored-bullets li::marker {
-        color: #0065ff; /* Matches your theme's blue color */
-        font-size: 1.2rem; /* Matches the exact size from the About Us page */
+        color: #0065ff;
+        font-size: 1.2rem;
     }
-} /* <-- Closes the main .Initiatives wrapper */
+}
+
+/* ========================================= */
+/* --- 6. Impact Counter Section & Tabs ---  */
+/* ========================================= */
+
+.impact-counter-section {
+    border: 1px solid #e9ecef;
+}
+
+/* The default REST state */
+.counter-box {
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 12px;
+    background-color: #ffffff; /* Starts White */
+    border: 1px solid #eaeaea;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+/* Text starts BLACK so you can read it on the white background */
+.counter-box h2,
+.counter-box p {
+    color: #000000 !important;
+    transition: color 0.5s ease;
+}
+
+/* Optional lift on hover before clicking */
+.counter-box:hover {
+    transform: translateY(-5px);
+}
+
+/* THE ACTIVE STATE (Turns Green!) */
+.counter-box.active {
+    background-color: #28a745 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+}
+
+/* Text turns WHITE when the box becomes active (green) */
+.counter-box.active h2,
+.counter-box.active p {
+    color: #ffffff !important;
+}
+
+/* Smooth fade in when a tab is clicked */
+.tab-content-fade {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* ========================================= */
 /* ========== RESPONSIVE DESIGN ============ */
@@ -120,14 +171,14 @@
 
 @media only screen and (max-width: 767px) {
     .Initiatives {
-        padding-top: 40px; /* Much tighter top for mobile */
+        padding-top: 40px;
 
         .hint-text {
             font-size: 1rem;
         }
 
         .initiative-cards {
-            height: 280px !important; /* Tightened height */
+            height: 280px !important;
             margin-bottom: 10px;
 
             .initiative-card-wrapper {
@@ -136,7 +187,6 @@
                     height: 180px !important;
                 }
 
-                /* Green pulse icon position remains relative to image */
                 &::after {
                     content: "i";
                     font-family: serif;
@@ -159,15 +209,20 @@
             }
         }
 
-        /* Responsive Mobile Animation Settings */
         .initiative-details {
             width: 95vw;
-            padding: 0 20px; /* Hidden state padding for mobile */
-            margin-top: 0;
         }
+    }
 
-        .initiative-details.show {
-            padding: 25px 20px; /* Expanded state padding for mobile */
-        }
+    .counter-box {
+        padding: 10px 5px;
+    }
+
+    .counter-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .impact-counter-section .col-4 {
+        padding: 0 2px;
     }
 }

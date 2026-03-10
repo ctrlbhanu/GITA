@@ -60,20 +60,20 @@ export default function Footer() {
               <Link to="/initiatives" onClick={scrollToTop}>
                 Initiatives
               </Link>
-              <Link to="/internship" onClick={scrollToTop}>
-                Internship
+              <Link to="/programme" onClick={scrollToTop}>
+                Programmes
               </Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Useful Links</h2>
-              {/* Added onClick triggers to all links! */}
-              <Link to="#" onClick={scrollToTop}>
-                Terms of use
+              {/* Updated the 'to' attributes for your new pages! */}
+              <Link to="/terms-of-use" onClick={scrollToTop}>
+                Terms of Use
               </Link>
-              <Link to="#" onClick={scrollToTop}>
-                Privacy policy
+              <Link to="/privacy-policy" onClick={scrollToTop}>
+                Privacy Policy
               </Link>
             </div>
           </div>

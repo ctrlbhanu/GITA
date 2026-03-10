@@ -44,7 +44,7 @@ const teamMembers = [
     name: "Simran Sethi",
     role: "Research and Partnerships Coordinator",
     image: simranimg,
-    bio: "Providing the essential team energy and high-level chaos.",
+    bio: "Fueling our missions through evidence-based strategy and global collaborations.",
     linkedin: "https://www.linkedin.com/in/simran-sethi-7b04492b6/",
   },
 ];
