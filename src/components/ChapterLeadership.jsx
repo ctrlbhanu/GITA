@@ -34,13 +34,8 @@ export default function ChapterLeadership() {
                     href="mailto:globalita21@gmail.com?subject=Inquiry:%20Chapter%20Leadership"
                     className="chapter-btn"
                   >
-                    <i className="fas fa-envelope me-2"></i> Email Us
-                  </a>
-
-                  {/* Vartika's Contact Button */}
-                  <a href="tel:+917905229959" className="chapter-btn-alt">
-                    <i className="fas fa-phone-alt me-2"></i> Contact Vartika:
-                    +91 79052 29959
+                    <i className="fas fa-envelope me-2"></i> Contact Us via
+                    Email
                   </a>
                 </div>
               </div>

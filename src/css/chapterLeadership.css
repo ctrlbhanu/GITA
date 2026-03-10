@@ -1,13 +1,13 @@
 .chapter-section {
-    padding: 80px 0;
+    padding: 60px 0; /* Matched to guidance padding */
     background-color: transparent;
 }
 
 .chapter-content {
+    /* Alignment: Left for headers, Justify for body */
     text-align: left;
-    /* REMOVED: border-left: 3px solid #0065ff; */
-    /* RESET: padding-left to 0 to remove the gap left by the line */
     padding-left: 0;
+    border-left: none;
 }
 
 .chapter-subtitle {
@@ -15,7 +15,7 @@
     font-size: 2rem;
     letter-spacing: 2px;
     font-weight: 700;
-    text-transform: uppercase;
+    /* Removed uppercase to match guidance style exactly */
 }
 
 .chapter-title {
@@ -27,10 +27,15 @@
 
 .chapter-body-text {
     width: 100%;
-    text-align: justify;
+    /* Clean 'edge-to-edge' look */
+    text-align: justify !important;
     color: #444;
     font-size: 1.2rem;
     line-height: 1.9;
+}
+
+.chapter-body-text p {
+    margin-bottom: 20px;
 }
 
 .chapter-highlight {
@@ -40,20 +45,34 @@
     text-align: left;
 }
 
+/* This section handles the "Ready to start a chapter?" text */
+.chapter-contact-footer {
+    text-align: left;
+    margin-top: 3rem; /* Same as mt-5 */
+}
+
+.chapter-contact-footer h5 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem; /* Same as mb-3 */
+}
+
 .chapter-btn {
     display: inline-flex;
     align-items: center;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background-color: #1f8737;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
     transition: 0.2s ease-in-out;
+    border: none;
 }
 
 .chapter-btn:hover {
-    background-color: #004ccb;
+    background-color: #004ccb; /* Matched guidance hover color */
     color: #ffffff;
     transform: translateX(5px);
 }
@@ -61,7 +80,7 @@
 .chapter-btn-alt {
     display: inline-flex;
     align-items: center;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background-color: #f8f9fa;
     color: #333;
     border: 1px solid #ddd;
@@ -75,19 +94,17 @@
     background-color: #eeeeee;
     color: #000;
     border-color: #bbb;
+    transform: translateX(5px);
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .chapter-content {
-        /* Ensure it remains line-free on mobile */
-        border-left: none;
-        padding-left: 0;
-    }
     .chapter-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .chapter-body-text {
-        text-align: left;
+        text-align: left !important;
+        font-size: 1.1rem;
     }
     .chapter-btn,
     .chapter-btn-alt {

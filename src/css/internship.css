@@ -13,7 +13,7 @@
 
 .internship-title {
     color: #111111;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@
 }
 
 .form-roll-down.visible {
-    max-height: 2000px; /* High enough to show the iframe */
+    max-height: 5000px; /* Increased to ensure the long iframe fits */
     opacity: 1;
     margin-top: 40px;
 }
