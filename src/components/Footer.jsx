@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import "../css/footer.css";
 
 export default function Footer() {
-  // A quick helper function so we don't have to write it out every time
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="footer">
       <div className="container">
@@ -50,44 +45,31 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Popular Links</h2>
-              {/* Added onClick triggers to all links! */}
-              <Link to="/about" onClick={scrollToTop}>
-                About Us
-              </Link>
-              <Link to="/initiatives" onClick={scrollToTop}>
-                Initiatives
-              </Link>
-              <Link to="/programme" onClick={scrollToTop}>
-                Programmes
-              </Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/initiatives">Initiatives</Link>
+              <Link to="/programme">Programmes</Link>
             </div>
           </div>
+
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Useful Links</h2>
-              {/* Updated the 'to' attributes for your new pages! */}
-              <Link to="/terms-of-use" onClick={scrollToTop}>
-                Terms of Use
-              </Link>
-              <Link to="/privacy-policy" onClick={scrollToTop}>
-                Privacy Policy
-              </Link>
+              <Link to="/terms-of-use">Terms of Use</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </div>
           </div>
         </div>
       </div>
+
       <div className="container copyright">
         <div className="row">
           <div className="col-md-6">
             <p>
-              {/* Also added to your copyright home link */}©{" "}
-              <Link to="/" onClick={scrollToTop}>
-                GITA
-              </Link>{" "}
-              | 2026, All Right Reserved.
+              © <Link to="/">GITA</Link> | 2026, All Right Reserved.
             </p>
           </div>
         </div>

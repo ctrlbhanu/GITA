@@ -27,7 +27,7 @@
 .left h4 {
     font-size: 1.35rem;
     font-style: italic;
-    color: #0065ff; /* Fixed typo: removed 'green' from hex */
+    color: #28a745;
 }
 
 .left .titles {
@@ -43,13 +43,13 @@
 
 .left .caption2 p {
     font-size: 2.5rem;
-    font-weight: bold; /* Fixed: font-style bold doesn't exist, use font-weight */
+    font-weight: bold;
     color: black;
     text-transform: uppercase;
 }
 
 .left .caption2 p span {
-    color: #0065ff;
+    color: #28a745;
 }
 
 .left .caption3 {
@@ -65,26 +65,40 @@
 
 .left .btns {
     display: flex;
-    justify-content: space-between;
-    max-width: 250px;
+    justify-content: flex-start; /* Aligns the button to the left */
+    max-width: 300px;
     margin-top: 20px;
 }
 
-/* --- THE GREEN GLOW BUTTON --- */
+/* --- THE MERGED BUTTON (Rest State) --- */
 .left .btns .btn-outline-info {
     color: #0065ff;
-    border-color: #0065ff;
+    border: 2px solid #0065ff; /* Added explicit border */
+    background-color: transparent;
     border-radius: 5px;
-    padding: 10px 25px;
-    transition: all 0.3s ease-in-out;
+
+    /* Size and Typography */
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* Matched the speed to your guidance button */
+    transition: all 0.2s ease-in-out;
 }
 
+/* --- THE MERGED BUTTON (Hover State) --- */
 .left .btns .btn-outline-info:hover {
-    background-color: rgba(0, 168, 0, 1) !important;
-    border-color: rgba(0, 168, 0, 1) !important;
-    color: white !important;
-    /* This creates the "lighting up" effect */
-    box-shadow: 0 0 20px rgba(0, 168, 0, 0.6);
+    background-color: #28a745 !important; /* Turns green */
+    border-color: #28a745 !important; /* Border matches background */
+    color: #ffffff !important; /* Text turns white */
+
+    /* The slide right effect */
+    transform: translateX(5px);
+
+    /* Removes the old green glow */
+    box-shadow: none;
 }
 
 .right {
@@ -99,6 +113,28 @@
     object-fit: cover;
     /* THIS IS THE FIX FOR THE WHITE GAP */
     display: block;
+}
+
+/* ========================================= */
+/* --- Clean Impact Counter (Landing) ---    */
+/* ========================================= */
+
+.clean-counter {
+    padding: 20px 10px;
+}
+
+.clean-counter h2 {
+    color: #28a745 !important; /* Your brand blue */
+    font-size: 3rem; /* Made the numbers huge so they pop */
+    letter-spacing: -2px; /* Pulls the numbers slightly closer together */
+}
+
+.clean-counter p {
+    color: #444444 !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family:
+        "Quicksand", sans-serif; /* Spreads the text out for a premium look */
 }
 
 /**********************************/
@@ -128,8 +164,28 @@
         font-size: 0.85rem;
     }
 
+    /* Keeps the button large on mobile */
+    .left .btns .btn-outline-info {
+        padding: 14px 35px !important;
+        font-size: 1.2rem !important;
+    }
+
     .right img {
         width: 100%;
         height: auto;
+    }
+
+    /* --- Mobile Adjustments for Clean Counters --- */
+    .clean-counter {
+        padding: 10px 0;
+    }
+
+    .clean-counter h2 {
+        font-size: 3rem !important; /* Scales down smoothly for phones */
+    }
+
+    .clean-counter p {
+        font-size: 0.85rem !important;
+        letter-spacing: 1px;
     }
 }

@@ -9,6 +9,7 @@ import React from "react";
 // Layout Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop"; // <-- 1. Added Import
 
 // Page Imports
 import Home from "./pages/Home";
@@ -25,6 +26,9 @@ import TermsOfUse from "./pages/TermsOfUse";
 export default function App() {
   return (
     <Router>
+      {/* <-- 2. Added ScrollToTop helper right here! --> */}
+      <ScrollToTop />
+
       {/* 1. Navbar stays at the top of every single page */}
       <Navbar />
 

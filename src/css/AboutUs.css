@@ -26,7 +26,7 @@
 }
 
 .highlight-text {
-    color: #0065ff;
+    color: #28a745;
 }
 
 .about-subtitle {
@@ -46,29 +46,15 @@
     font-size: 1.1rem;
 }
 
-/* Expansion Logic */
-.expanded-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.expanded-content.show {
-    max-height: 2500px; /* Large enough for vertical content */
-    opacity: 1;
-    margin-top: 40px;
-}
-
-/* Vertical Content Box */
+/* Vertical Content Box (BOX STYLING REMOVED) */
 .content-inner {
-    background: #fdfdfd;
-    border-radius: 20px;
-    border: 1px solid #eaeaea;
+    background: transparent; /* Made transparent */
+    border: none; /* Removed the line border */
+    /* Removed the border-radius as it is no longer needed without a background */
 }
 
 .text-success {
-    color: #0065ff !important;
+    color: #28a745 !important;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -77,17 +63,6 @@
     border-color: #eaeaea !important;
 }
 
-.about-btn {
-    border-color: #0065ff;
-    color: #0065ff;
-    background-color: transparent;
-    font-weight: 600;
-}
-
-.about-btn:hover {
-    background-color: #1f8737;
-    color: #ffffff;
-}
 /* Custom color for the bullet points */
 .colored-bullets li::marker {
     color: #0065ff; /* Your theme's blue color */

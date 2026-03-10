@@ -35,7 +35,7 @@
     }
 
     .hint-text {
-        color: #28a745;
+        color: #0065ff;
         font-weight: 600;
         margin: 0;
         font-size: 1.1rem;
@@ -74,12 +74,12 @@
         }
     }
 
-    /* --- 4. Initiative Details (Big Box styling REMOVED) --- */
+    /* --- 4. Initiative Details --- */
     .initiative-details {
         width: 90%;
-        max-width: 900px; /* Slightly wider for the grid */
+        max-width: 900px;
         margin: 0 auto;
-        background: transparent; /* Removed big background box */
+        background: transparent;
         position: relative;
         z-index: 5;
 
@@ -163,6 +163,15 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ========================================= */
+/* ------- 7. Conditionally Rendered Lists - */
+/* ========================================= */
+
+/* Changes the color of the individual item titles */
+.activities-list .card h6 {
+    color: #004ccb !important; /* Your requested dark blue */
 }
 
 /* ========================================= */

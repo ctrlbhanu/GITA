@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import aboutImage from "../assets/about.png";
 import "../css/AboutUs.css";
 
 export default function AboutUs() {
-  const [showMore, setShowMore] = useState(false);
-
   return (
     <div className="about-full-section py-5">
       <div className="container">
@@ -39,17 +37,11 @@ export default function AboutUs() {
               sustainability, financial literacy, and community-led
               transformation. Rooted in purpose. Growing through action.
             </p>
-            <button
-              className="btn btn-outline-success btn-lg about-btn mt-3"
-              onClick={() => setShowMore(!showMore)}
-            >
-              {showMore ? "Read Less" : "Read More"}
-            </button>
           </div>
         </div>
 
-        {/* Bottom Section: Full-Width Vertical Expansion */}
-        <div className={`expanded-content ${showMore ? "show" : ""}`}>
+        {/* Bottom Section: Always Visible Content */}
+        <div className="mt-5">
           <div className="content-inner p-4 p-md-5">
             {/* Section 1: History */}
             <div className="detail-section mb-5">
@@ -76,7 +68,6 @@ export default function AboutUs() {
                 inequality. We aim to:
               </p>
 
-              {/* Added 'ps-4' for indentation and 'colored-bullets' for custom bullet colors */}
               <ul className="about-text-body ps-4 colored-bullets">
                 <li className="mb-2">
                   Normalize menstrual and reproductive health conversations
