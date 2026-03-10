@@ -55,7 +55,7 @@ export default function AboutUs() {
             <div className="detail-section mb-5">
               <h2 className="text-success mb-3">Our History</h2>
               <p className="about-text-body">
-                Founded in 2019 by Tanisha Pandit, a Delhi University alumna,
+                Founded in 2017 by Tanisha Pandit, a Delhi University alumna,
                 Ritva Foundation began with a simple mission, to break the
                 silence around menstruation. At a time when myths and stigma
                 dominated conversations, Ritva chose awareness, accuracy, and
@@ -125,7 +125,6 @@ export default function AboutUs() {
                 transformation.
               </p>
             </div>
-            
           </div>
         </div>
       </div>
