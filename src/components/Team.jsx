@@ -5,6 +5,7 @@ import simranimg from "../assets/simran.png";
 import bhanuimg from "../assets/bhanu.png";
 import tanishaimg from "../assets/tanisha.png";
 import vartikaimg from "../assets/vartika.png";
+import rythmimg from "../assets/rythm.png";
 
 const teamMembers = [
   {
@@ -26,7 +27,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Rythm Damaria",
-    image: "",
+    image: rythmimg,
     role: "Creative and Design Coordinator",
     bio: "Driving digital innovation and functional design excellence.",
     linkedin: "https://www.linkedin.com/in/rythm-damaria-8560601a2/",
