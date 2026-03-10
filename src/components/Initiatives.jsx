@@ -6,27 +6,26 @@ import { config } from "react-spring";
 import ritva from "../assets/Initiatives/Ritva.png";
 import "../css/initiatives.css";
 
+// --- INITIATIVE DATA ---
 const initiativeData = [
   {
     key: uuidv4(),
     image: ritva,
     title: "Ritva Foundation",
     subtitle: 'SAFE, SUSTAINABLE, AND "UNPLASTIC" MENSTRUATION',
-    description:
-      "Founded in 2020 by Tanisha Pandit and alumni of Kirori Mal College, the Ritva Foundation is a student-led, non-profit organization dedicated to promoting sustainable, healthy, and stigma-free menstruation across India. We work tirelessly to destigmatize periods, educate communities on reproductive health, and provide biodegradable menstrual products to women in rural areas.",
-    impact: [
-      {
-        bold: "Education & Awareness:",
-        text: "Organizing workshops and educational sessions on critical reproductive health topics, including cervical cancer awareness.",
-      },
-      {
-        bold: "Direct Action:",
-        text: "Hosting regular donation camps to distribute biodegradable and eco-friendly sanitary products to underprivileged women.",
-      },
-      {
-        bold: "Expanding Chapters:",
-        text: "Operating a growing network of active student chapters across the University of Delhi, including Hindu College, Miranda House, and Deshbandhu College.",
-      },
+    description: [
+      "Ritva, derived from the Sanskrit word for menstruation, was established in 2017 as the brainchild of our founder. It was created with a simple but powerful belief — that menstruation, a natural biological process experienced by millions of women, should be understood, respected, and spoken about without stigma.",
+      "Despite being a basic aspect of human health, menstrual hygiene continues to be overlooked, misunderstood, or treated with silence in many communities. Ritva was founded to change that narrative. Through awareness initiatives, community engagement, and educational efforts, the project works to normalize conversations around menstruation and ensure that women and girls have access to the knowledge and resources they deserve.",
+      "Beyond awareness, Ritva also focuses on empowering women to take ownership of their health and well-being, while encouraging a shift towards sustainable and eco-friendly menstrual practices.",
+    ],
+    vision:
+      "To build a society where menstruation is no longer a taboo but a conversation rooted in awareness, dignity, and acceptance, and where every woman and girl has the knowledge, access, and confidence to manage her menstrual health safely and sustainably.",
+    goals: [
+      "Normalize conversations around menstruation by addressing stigma and misinformation in communities.",
+      "Promote menstrual hygiene awareness and ensure access to accurate information.",
+      "Support women’s empowerment by encouraging financial independence and informed health choices.",
+      "Encourage sustainable menstruation by advocating for eco-friendly and plastic-free menstrual products.",
+      "Create inclusive spaces where menstrual health is treated as a fundamental part of human well-being.",
     ],
   },
 ];
@@ -41,6 +40,7 @@ const Initiatives = () => {
 
   const [showDetails, setShowDetails] = useState(false);
 
+  // --- CAROUSEL SLIDES MAPPING ---
   const InCards = initiativeData.map((slide, index) => {
     return {
       key: slide.key,
@@ -51,8 +51,10 @@ const Initiatives = () => {
       ),
       onClick: () => {
         if (index === card.goToSlide) {
+          // If clicking the currently active card, toggle the details box open/closed
           setShowDetails(!showDetails);
         } else {
+          // If clicking a new card in the background, bring it forward and open details
           setCard({ ...card, goToSlide: index });
           setShowDetails(true);
         }
@@ -65,12 +67,12 @@ const Initiatives = () => {
   return (
     <div className="Initiatives">
       <div className="title">
-        {/* Removed h1 entirely to save space */}
         <p className="hint-text">
           Click on an initiative to explore our impact
         </p>
       </div>
 
+      {/* --- CAROUSEL DISPLAY --- */}
       <div className="initiative-cards">
         <Carousel
           slides={InCards}
@@ -81,26 +83,40 @@ const Initiatives = () => {
         />
       </div>
 
-      {showDetails && activeInitiative && (
-        <div className="initiative-details p-4 fade-in-up">
-          <h2 className="text-success mb-2">{activeInitiative.title}</h2>
-          <h5 className="text-primary mb-4" style={{ letterSpacing: "1px" }}>
-            {activeInitiative.subtitle}
-          </h5>
+      {/* --- EXPANDING DETAILS SECTION --- */}
+      <div className={`initiative-details ${showDetails ? "show" : ""}`}>
+        {activeInitiative && (
+          <>
+            <h2 className="text-success mb-2">{activeInitiative.title}</h2>
+            <h5 className="text-primary mb-4" style={{ letterSpacing: "1px" }}>
+              {activeInitiative.subtitle}
+            </h5>
 
-          <p className="about-text-body mb-4">{activeInitiative.description}</p>
-
-          <h4 className="text-success mb-3 mt-4">Our Impact & Reach</h4>
-          <ul className="about-text-body list-unstyled">
-            {activeInitiative.impact.map((item, i) => (
-              <li className="mb-3" key={i}>
-                <span className="text-primary fw-bold me-2">—</span>{" "}
-                <strong>{item.bold}</strong> {item.text}
-              </li>
+            {/* Render each paragraph from the description array */}
+            {activeInitiative.description.map((paragraph, index) => (
+              <p key={index} className="about-text-body mb-3">
+                {paragraph}
+              </p>
             ))}
-          </ul>
-        </div>
-      )}
+
+            {/* Vision Section */}
+            <h4 className="text-success mb-3 mt-4">Vision</h4>
+            <p className="about-text-body mb-4">{activeInitiative.vision}</p>
+
+            {/* Goals Section */}
+            <h4 className="text-success mb-3 mt-4">Goals</h4>
+
+            {/* The 'colored-bullets' class syncs this perfectly with your About Us page! */}
+            <ul className="about-text-body ps-4 colored-bullets">
+              {activeInitiative.goals.map((goal, i) => (
+                <li className="mb-3" key={i}>
+                  {goal}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
     </div>
   );
 };

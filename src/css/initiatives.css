@@ -1,9 +1,17 @@
+/* ========================================= */
+/* =========== GLOBAL OVERRIDES ============ */
+/* ========================================= */
+
 /* --- FOOTER PUSH FIX --- */
 .footer {
     position: relative !important;
     clear: both !important;
     z-index: 1 !important;
 }
+
+/* ========================================= */
+/* ======== INITIATIVES COMPONENT ========== */
+/* ========================================= */
 
 .Initiatives {
     background: #ffffff;
@@ -21,7 +29,7 @@
         display: none !important;
     }
 
-    /* --- 2. Title Styling --- */
+    /* --- 2. Title & Header Styling --- */
     .title {
         display: flex;
         flex-direction: column;
@@ -29,7 +37,6 @@
         margin-bottom: 1em; /* Reduced from 2em */
     }
 
-    /* Styles for the JSX paragraph */
     .hint-text {
         color: #28a745;
         font-weight: 600;
@@ -71,20 +78,41 @@
         }
     }
 
-    /* --- 4. Initiative Details Text Box --- */
+    /* --- 4. Initiative Details Text Box (Animations) --- */
     .initiative-details {
         width: 90%;
         max-width: 800px;
         margin: 0 auto 30px auto;
         background: #fdfdfd;
-        border: 1px solid #eaeaea;
         border-radius: 20px;
-        padding: 40px; /* Slightly reduced padding */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         position: relative;
         z-index: 5;
+
+        /* THE ANIMATION LOGIC (HIDDEN STATE) */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 40px; /* Vertical padding is 0 so it hides completely */
+        border: 1px solid transparent; /* Hide border when closed */
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
-}
+
+    /* THE EXPANDED STATE (Triggered via React) */
+    .initiative-details.show {
+        max-height: 2500px; /* Large enough for content */
+        opacity: 1;
+        padding: 40px; /* Restore vertical padding */
+        border-color: #eaeaea; /* Restore border */
+        margin-top: 20px;
+    }
+
+    /* --- 5. Typography & Elements --- */
+    .colored-bullets li::marker {
+        color: #0065ff; /* Matches your theme's blue color */
+        font-size: 1.2rem; /* Matches the exact size from the About Us page */
+    }
+} /* <-- Closes the main .Initiatives wrapper */
 
 /* ========================================= */
 /* ========== RESPONSIVE DESIGN ============ */
@@ -131,10 +159,15 @@
             }
         }
 
+        /* Responsive Mobile Animation Settings */
         .initiative-details {
             width: 95vw;
-            padding: 25px 20px;
+            padding: 0 20px; /* Hidden state padding for mobile */
             margin-top: 0;
+        }
+
+        .initiative-details.show {
+            padding: 25px 20px; /* Expanded state padding for mobile */
         }
     }
 }

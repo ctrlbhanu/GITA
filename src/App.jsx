@@ -18,6 +18,7 @@ import SignUp from "./pages/SignUp";
 import TeamPage from "./pages/TeamPage";
 import Initiatives from "./pages/Initiatives";
 import AdvisoryComit from "./pages/AdvisoryComit";
+import Programme from "./pages/Programme";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/event" element={<Events />} />
+        <Route path="/programme" element={<Programme />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/initiatives" element={<Initiatives />} />

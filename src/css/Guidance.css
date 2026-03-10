@@ -1,0 +1,83 @@
+.guidance-section {
+    padding: 60px 0;
+    background-color: transparent;
+}
+
+.guidance-content {
+    /* Alignment: Left for headers, Justify for body */
+    text-align: left;
+}
+
+.guidance-subtitle {
+    color: #1f8737;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.guidance-title {
+    color: #111111;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.guidance-body-text {
+    width: 100%;
+    /* This creates the clean 'edge-to-edge' look on both sides */
+    text-align: justify;
+    color: #444;
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+.guidance-body-text p {
+    margin-bottom: 20px;
+}
+
+.guidance-highlight {
+    color: #0065ff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: left; /* Keep the highlight punchy on the left */
+}
+
+.guidance-contact-footer {
+    text-align: left;
+}
+
+.guidance-contact-footer h5 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.guidance-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #1f8737;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.guidance-btn:hover {
+    background-color: #004ccb;
+    color: #ffffff;
+    transform: translateX(5px); /* Moves right on hover instead of lifting */
+}
+
+/* For mobile, justified text can sometimes have weird spacing,
+   so we keep it left-aligned for small screens */
+@media (max-width: 768px) {
+    .guidance-title {
+        font-size: 2rem;
+    }
+    .guidance-body-text {
+        text-align: left;
+        font-size: 1.1rem;
+    }
+}

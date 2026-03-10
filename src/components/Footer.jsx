@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Add this import
+import { Link } from "react-router-dom";
 import "../css/footer.css";
 
 export default function Footer() {
+  // A quick helper function so we don't have to write it out every time
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="footer">
       <div className="container">
@@ -48,16 +53,28 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Popular Links</h2>
-              {/* Changed from <a> to <Link> */}
-              <Link to="/about">About Us</Link>
-              <Link to="/initiatives">Initiatives</Link>
+              {/* Added onClick triggers to all links! */}
+              <Link to="/about" onClick={scrollToTop}>
+                About Us
+              </Link>
+              <Link to="/initiatives" onClick={scrollToTop}>
+                Initiatives
+              </Link>
+              <Link to="/internship" onClick={scrollToTop}>
+                Internship
+              </Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="footer-link">
               <h2>Useful Links</h2>
-              <Link to="#">Terms of use</Link>
-              <Link to="#">Privacy policy</Link>
+              {/* Added onClick triggers to all links! */}
+              <Link to="#" onClick={scrollToTop}>
+                Terms of use
+              </Link>
+              <Link to="#" onClick={scrollToTop}>
+                Privacy policy
+              </Link>
             </div>
           </div>
         </div>
@@ -66,7 +83,11 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-6">
             <p>
-              © <Link to="/">GITA</Link> | 2026, All Right Reserved.
+              {/* Also added to your copyright home link */}©{" "}
+              <Link to="/" onClick={scrollToTop}>
+                GITA
+              </Link>{" "}
+              | 2026, All Right Reserved.
             </p>
           </div>
         </div>

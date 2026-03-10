@@ -4,6 +4,7 @@ import PageHeader from "../components/PageHeader";
 import simranimg from "../assets/simran.png";
 import bhanuimg from "../assets/bhanu.png";
 import tanishaimg from "../assets/tanisha.png";
+import vartikaimg from "../assets/vartika.png";
 
 const teamMembers = [
   {
@@ -17,7 +18,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Vartika Kumari",
-    image: "",
+    image: vartikaimg,
     role: "Director Of Operations",
     bio: "Managing core operations and strategic execution for every initiative.",
     linkedin: "https://www.linkedin.com/in/vartika-kumari-b661a0263/",

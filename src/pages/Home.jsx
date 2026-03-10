@@ -1,11 +1,8 @@
-import Navbar from "../components/Navbar";
 import space from "../assets/Space.mp4";
 // If you have a placeholder image, import it here:
 // import spacePoster from "../assets/Space-poster.jpg";
 import "../css/home.css";
-import Footer from "../components/Footer";
 import Landing from "../components/Landing";
-import BackToTop from "../components/BackToTop";
 
 export default function Home() {
   return (

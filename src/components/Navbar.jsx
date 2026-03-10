@@ -125,6 +125,14 @@ export default function Navbar() {
               >
                 Advisory Committee
               </Link>
+              {/* FIXED: Closed the Advisory link properly before opening the Programme link */}
+              <Link
+                to="/programme"
+                className={`nav-item nav-link ${path === "/programme" ? "active" : ""}`}
+                onClick={closeMenu}
+              >
+                Programmes
+              </Link>
             </div>
           </div>
         </div>

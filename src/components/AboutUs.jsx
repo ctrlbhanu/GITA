@@ -29,12 +29,15 @@ export default function AboutUs() {
               Together
             </h1>
             <p className="about-text-lead mb-3">
-              We are a non-profit organization dedicated to empowering
-              communities.
+              GITA is a youth-led impact ecosystem built on one belief:
+              privilege carries responsibility.
             </p>
             <p className="about-text-body">
-              Our journey started with a simple mission: to ensure that every
-              individual has access to the resources they need to thrive.
+              What began in 2019 as Ritva Foundation an initiative to de-mystify
+              menstrual stigma has evolved into a multidimensional platform
+              driving women’s empowerment, child welfare, environmental
+              sustainability, financial literacy, and community-led
+              transformation. Rooted in purpose. Growing through action.
             </p>
             <button
               className="btn btn-outline-success btn-lg about-btn mt-3"
@@ -52,12 +55,16 @@ export default function AboutUs() {
             <div className="detail-section mb-5">
               <h2 className="text-success mb-3">Our History</h2>
               <p className="about-text-body">
-                Founded in 2020, GITA began as a small community group in VIT
-                and has grown into a structured NGO reaching hundreds of
-                families. We started by providing basic meals and have expanded
-                into full-scale educational support. Over the years, we have
-                partnered with various local leaders to ensure our impact is
-                both deep and sustainable.
+                Founded in 2019 by Tanisha Pandit, a Delhi University alumna,
+                Ritva Foundation began with a simple mission, to break the
+                silence around menstruation. At a time when myths and stigma
+                dominated conversations, Ritva chose awareness, accuracy, and
+                sustainability. Through university outreach and community
+                workshops, we de-mystified menstrual taboos, promoted
+                biodegradable “UNplastic” products, encouraged safe disposal
+                practices, and collaborated with organizations like CAPED for
+                cervical health awareness, growing into a student-led movement
+                for informed, sustainable change.
               </p>
             </div>
 
@@ -68,20 +75,42 @@ export default function AboutUs() {
                 Our primary goal is the total eradication of educational
                 inequality. We aim to:
               </p>
-              <ul className="about-text-body list-unstyled">
-                <li>
-                  <i className="fas fa-check text-success me-2"></i> Provide
-                  quality education and digital literacy to 5000+ children by
-                  2030.
+
+              {/* Added 'ps-4' for indentation and 'colored-bullets' for custom bullet colors */}
+              <ul className="about-text-body ps-4 colored-bullets">
+                <li className="mb-2">
+                  Normalize menstrual and reproductive health conversations
+                  through structured workshops and expanding campus outreach
+                  annually.
                 </li>
-                <li>
-                  <i className="fas fa-check text-success me-2"></i> Establish
-                  permanent healthcare clinics in remote rural sectors.
+                <li className="mb-2">
+                  Strengthen cervical health awareness through informed sessions
+                  and preventive education partnerships.
                 </li>
-                <li>
-                  <i className="fas fa-check text-success me-2"></i> Create
-                  vocational training centers for women to foster financial
-                  independence.
+                <li className="mb-2">
+                  Increase adoption of biodegradable, “UNplastic” menstrual
+                  products to reduce plastic waste and promote sustainable
+                  practices.
+                </li>
+                <li className="mb-2">
+                  Advance women’s empowerment through measurable leadership,
+                  skill-building, and financial literacy initiatives.
+                </li>
+                <li className="mb-2">
+                  Build financial confidence among young women through
+                  practical, action-oriented economic education programs.
+                </li>
+                <li className="mb-2">
+                  Encourage social entrepreneurship by nurturing youth-led,
+                  solution-driven community initiatives.
+                </li>
+                <li className="mb-2">
+                  Expand ethical, youth-led chapters that transform awareness
+                  into consistent, accountable grassroots action.
+                </li>
+                <li className="mb-2">
+                  Develop scalable, repeatable impact frameworks aligned with
+                  long-term sustainable development goals.
                 </li>
               </ul>
             </div>
@@ -90,13 +119,13 @@ export default function AboutUs() {
             <div className="detail-section pt-4 border-top border-secondary">
               <h2 className="text-success mb-3">Objectives</h2>
               <p className="about-text-body">
-                To achieve our vision, we focus on measurable objectives:
-                hosting monthly health check-ups, providing annual scholarships
-                for higher education, and maintaining a transparent resource
-                allocation system that ensures 90% of all donations go directly
-                to field projects.
+                Headquartered in Bhopal and active across Delhi-NCR, GITA
+                continues to expand its chapters, collaborations, and on-ground
+                initiatives. Not a campaign. A long-term commitment to
+                transformation.
               </p>
             </div>
+            
           </div>
         </div>
       </div>

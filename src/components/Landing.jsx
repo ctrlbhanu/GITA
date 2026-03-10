@@ -17,15 +17,16 @@ export default function Landing() {
         <div className="titles">
           <div className="caption2">
             <p>
-              At <span>Gita,</span> we work towards the betterment of our{" "}
-              <span>world</span>
+              Rooted in <span>Purpose, </span>
+              <br />
+              Rising in <span> Action.</span>
             </p>
           </div>
 
           <div className="caption3">
             <p>
-              Bring out the change in society by spreading hands to help the
-              unprivileged children and other backward communities.
+              From breaking stigma to building systems, GITA carries forward
+              Ritva’s mission: youth-led, community-driven, and built to last.
             </p>
           </div>
 

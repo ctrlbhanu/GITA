@@ -88,3 +88,8 @@
     background-color: #1f8737;
     color: #ffffff;
 }
+/* Custom color for the bullet points */
+.colored-bullets li::marker {
+    color: #0065ff; /* Your theme's blue color */
+    font-size: 1.2rem; /* Optional: Makes the bullet just a tiny bit bigger/bolder */
+}
