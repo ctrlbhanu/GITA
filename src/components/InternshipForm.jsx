@@ -21,7 +21,7 @@ export default function InternshipForm() {
         <div className="row justify-content-center">
           <div className="col-12 col-lg-11">
             <div className="internship-content">
-              <h2 className="internship-subtitle">THE INTERNSHIP PROGRAMME</h2>
+              <h2 className="internship-subtitle">The Internship Programme</h2>
               <h1 className="internship-title">Your Launchpad for Change.</h1>
               <div className="internship-body-text">
                 <p>

@@ -3,15 +3,17 @@
 }
 
 .internship-subtitle {
+    font-family: "Poppins", sans-serif;
     color: #1f8737;
-    font-size: 2rem; /* Fixed from previous error */
-    letter-spacing: 2px;
+    font-size: 2rem;
+
     font-weight: 700;
-    text-transform: uppercase;
+
     margin-bottom: 10px;
 }
 
 .internship-title {
+    font-family: "Poppins", sans-serif;
     color: #0065ff;
     font-size: 1.5rem;
     font-weight: 800;
@@ -20,6 +22,7 @@
 }
 
 .internship-body-text {
+    font-family: "Quicksand", sans-serif;
     width: 100%;
     text-align: justify !important;
     color: #444;
@@ -28,6 +31,7 @@
 }
 
 .internship-btn {
+    font-family: "Poppins", sans-serif;
     display: inline-flex;
     align-items: center;
     padding: 12px 30px;
@@ -44,7 +48,6 @@
     transform: translateX(5px);
 }
 
-/* Roll-down Effect */
 .form-roll-down {
     max-height: 0;
     overflow: hidden;
@@ -55,7 +58,7 @@
 }
 
 .form-roll-down.visible {
-    max-height: 5000px; /* Increased to ensure the long iframe fits */
+    max-height: 5000px;
     opacity: 1;
     margin-top: 40px;
 }

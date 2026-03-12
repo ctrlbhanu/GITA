@@ -8,7 +8,7 @@ export default function ChapterLeadership() {
         <div className="row justify-content-center">
           <div className="col-12 col-lg-11">
             <div className="chapter-content">
-              <h2 className="chapter-subtitle mb-2">CHAPTER LEADERSHIP</h2>
+              <h2 className="chapter-subtitle mb-2">Chapter Leadership</h2>
               <h1 className="chapter-title mb-4">
                 Your Movement, Our Support.
               </h1>

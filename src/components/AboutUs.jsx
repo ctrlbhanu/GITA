@@ -47,7 +47,7 @@ export default function AboutUs() {
             <div className="detail-section mb-5">
               <h2 className="text-success mb-3">Our History</h2>
               <p className="about-text-body">
-                Founded in 2017 by Tanisha Pandit, a Delhi University alumna,
+                Founded in 2019 by Tanisha Pandit, a Delhi University alumna,
                 Ritva Foundation began with a simple mission, to break the
                 silence around menstruation. At a time when myths and stigma
                 dominated conversations, Ritva chose awareness, accuracy, and
@@ -110,8 +110,8 @@ export default function AboutUs() {
             <div className="detail-section pt-4 border-top border-secondary">
               <h2 className="text-success mb-3">Objectives</h2>
               <p className="about-text-body">
-                Headquartered in Bhopal and active across Delhi-NCR, GITA
-                continues to expand its chapters, collaborations, and on-ground
+                Headquartered in Bhopal and active across nation, GITA continues
+                to expand its chapters, collaborations, and on-ground
                 initiatives. Not a campaign. A long-term commitment to
                 transformation.
               </p>

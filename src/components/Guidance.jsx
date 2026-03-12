@@ -10,7 +10,7 @@ export default function Guidance() {
             {" "}
             {/* Slightly wider for that edge-to-edge feel */}
             <div className="guidance-content">
-              <h2 className="guidance-subtitle mb-2">THE GUIDANCE PROGRAMME</h2>
+              <h2 className="guidance-subtitle mb-2">The Guidance Programme</h2>
               <h1 className="guidance-title mb-4">Your Roadmap to Impact.</h1>
 
               <div className="guidance-body-text">
