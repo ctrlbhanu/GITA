@@ -24,7 +24,6 @@
 }
 
 .guidance-body-text {
-    font-family: "Quicksand", sans-serif;
     width: 100%;
     text-align: justify;
     color: #444;
@@ -37,7 +36,6 @@
 }
 
 .guidance-highlight {
-    font-family: "Quicksand", sans-serif;
     color: #0065ff;
     font-weight: 700;
     font-size: 1.3rem;

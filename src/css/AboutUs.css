@@ -68,3 +68,21 @@
     color: #0065ff; /* Your theme's blue color */
     font-size: 1.2rem; /* Optional: Makes the bullet just a tiny bit bigger/bolder */
 }
+/* ========================================= */
+/* --- iPAD / TABLET IMAGE HEIGHT FIX ------ */
+/* ========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-img-frame {
+        display: block !important;
+        height: 100% !important; /* Forces the frame to match the paragraph height */
+        width: 100%;
+    }
+
+    .about-img-frame img {
+        height: 100% !important; /* Forces the image to fill the new tall frame */
+        width: 100% !important;
+        max-height: none !important; /* Removes the 400px limit just for iPads */
+        object-fit: cover; /* Keeps the photo nicely cropped without squishing */
+    }
+}

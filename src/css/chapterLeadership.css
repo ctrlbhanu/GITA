@@ -26,7 +26,6 @@
 }
 
 .chapter-body-text {
-    font-family: "Quicksand", sans-serif;
     width: 100%;
     text-align: justify !important;
     color: #444;
@@ -39,7 +38,6 @@
 }
 
 .chapter-highlight {
-    font-family: "Quicksand", sans-serif;
     color: #0065ff;
     font-weight: 700;
     font-size: 1.3rem;

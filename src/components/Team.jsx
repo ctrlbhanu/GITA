@@ -55,16 +55,18 @@ export default function Team() {
     <>
       <PageHeader title="Meet The Team" path="/team" name="Meet The Team" />
       <div className="team-page-container py-5">
-        {/* The 'container' div fixes the edge-to-edge stretching */}
-        <div className="container px-md-5">
+        {/* Changed px-md-5 to px-lg-5 to stop squishing on tablets */}
+        <div className="container px-lg-5">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
+              /* Changed flex-row-reverse to flex-lg-row-reverse so it doesn't flip weirdly when stacked on tablets */
               className={`row align-items-center mb-5 banner-card-row ${
-                index % 2 !== 0 ? "flex-row-reverse" : ""
+                index % 2 !== 0 ? "flex-lg-row-reverse" : ""
               }`}
             >
-              <div className="col-md-4 text-center">
+              {/* Upgraded md to lg */}
+              <div className="col-lg-4 text-center">
                 <div className="banner-img-frame">
                   <img
                     src={member.image}
@@ -74,10 +76,11 @@ export default function Team() {
                 </div>
               </div>
 
+              {/* Upgraded md to lg, and added mt-4 to give breathing room when stacked */}
               <div
-                className={`col-md-8 px-md-5 ${
-                  index % 2 !== 0 ? "text-md-end" : "text-md-start"
-                } text-center mt-3 mt-md-0`}
+                className={`col-lg-8 px-lg-5 ${
+                  index % 2 !== 0 ? "text-lg-end" : "text-lg-start"
+                } text-center mt-4 mt-lg-0`}
               >
                 <h3 className="member-name mb-1">{member.name}</h3>
                 <h5 className="member-role  mb-3">{member.role}</h5>
@@ -91,8 +94,7 @@ export default function Team() {
                     className="me-3"
                   >
                     <i className="fab fa-linkedin fa-lg"></i>
-                  </a>{" "}
-                  {/* Added missing closing tag here */}
+                  </a>
                 </div>
               </div>
             </div>

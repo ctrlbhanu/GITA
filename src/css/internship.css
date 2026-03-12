@@ -3,7 +3,6 @@
 }
 
 .internship-subtitle {
-    font-family: "Poppins", sans-serif;
     color: #1f8737;
     font-size: 2rem;
 
@@ -22,7 +21,6 @@
 }
 
 .internship-body-text {
-    font-family: "Quicksand", sans-serif;
     width: 100%;
     text-align: justify !important;
     color: #444;
