@@ -27,8 +27,8 @@
 
 .initiative-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px#28a745;
-    border-color: #28a745;
+    box-shadow: 0 15px 35px rgba(0, 150, 255, 0.2); /* Soft Green Shadow */
+    border-color: #28a745; /* Green Border */
 }
 
 /* Typography Inside Cards */

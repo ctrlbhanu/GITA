@@ -28,7 +28,7 @@ const initiatives = [
   {
     id: 4,
     title: "BRICS4Her Cervical Cancer Awareness",
-    subtitle: "University Of Delhi",
+    subtitle: "Delhi",
     desc: "Reached 3,000 individuals via interactive workshops, pottery, and art-based sessions led by Gynac experts on HPV and screening.",
     tag: "Health",
   },
