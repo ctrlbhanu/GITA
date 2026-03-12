@@ -125,13 +125,7 @@ export default function Navbar() {
               >
                 Meet The Team
               </Link>
-              <Link
-                to="/advisory"
-                className={`nav-item nav-link ${path === "/advisory" ? "active" : ""}`}
-                onClick={closeMenu}
-              >
-                Advisory Committee
-              </Link>
+
               {/* FIXED: Closed the Advisory link properly before opening the Programme link */}
             </div>
           </div>
