@@ -146,7 +146,7 @@ const Initiatives = () => {
                 {({ isVisible }) => (
                   <div className="clean-counter">
                     <h2 className="fw-bold mb-0">
-                      {isVisible ? <CountUp end={60} duration={2} /> : "0"}
+                      {isVisible ? <CountUp end={50} duration={2} /> : "0"}
                     </h2>
                     <p className="fw-bold mb-0">Panel Discussions</p>
                   </div>
@@ -174,7 +174,7 @@ const Initiatives = () => {
                   {/* The Always-Visible Text */}
                   <p className="card-desc ritva-hero-desc mb-0">
                     Ritva, derived from the Sanskrit word for menstruation, was
-                    established in 2017 to break the silence around a natural
+                    established in 2019 to break the silence around a natural
                     biological process. What began as an initiative to
                     de-mystify menstrual stigma has evolved into a student-led
                     movement ensuring access to accurate knowledge and
