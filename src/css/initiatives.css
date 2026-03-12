@@ -1,237 +1,129 @@
-/* ========================================= */
-/* =========== GLOBAL OVERRIDES ============ */
-/* ========================================= */
+.initiatives-page {
+    background-color: #ffffff;
+}
 
-.footer {
-    position: relative !important;
-    clear: both !important;
-    z-index: 1 !important;
+/* Counters */
+.clean-counter h2 {
+    color: #0065ff;
+    font-size: 3.5rem;
+}
+
+.clean-counter p {
+    color: #444;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 /* ========================================= */
-/* ======== INITIATIVES COMPONENT ========== */
+/* --- Unified Card Design & Animation ----  */
 /* ========================================= */
 
-.Initiatives {
-    background: #ffffff;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-
-    /* Kill Arrows */
-    .slick-prev,
-    .slick-next,
-    .slick-arrow {
-        display: none !important;
-    }
-
-    .title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1em;
-    }
-
-    .hint-text {
-        color: #0065ff;
-        font-weight: 600;
-        margin: 0;
-        font-size: 1.1rem;
-        font-family: "Quicksand", sans-serif;
-    }
-
-    /* Carousel Container */
-    .initiative-cards {
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        height: 450px !important;
-        margin: 0 auto 20px auto;
-        overflow: hidden;
-
-        .initiative-card-wrapper {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                cursor: pointer;
-                width: 800px;
-                height: 400px;
-                object-fit: cover;
-                border-radius: 15px;
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-
-                &:hover {
-                    transform: scale(1.02);
-                    filter: brightness(75%);
-                }
-            }
-        }
-    }
-
-    /* --- 4. Initiative Details --- */
-    .initiative-details {
-        width: 90%;
-        max-width: 900px;
-        margin: 0 auto;
-        background: transparent;
-        position: relative;
-        z-index: 5;
-
-        /* HIDDEN STATE */
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* EXPANDED STATE */
-    .initiative-details.show {
-        max-height: 4000px;
-        opacity: 1;
-        margin-top: 30px;
-        padding-bottom: 50px;
-    }
-
-    .colored-bullets li::marker {
-        color: #0065ff;
-        font-size: 1.2rem;
-    }
+.initiative-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* ========================================= */
-/* --- 6. Impact Counter Section & Tabs ---  */
-/* ========================================= */
-
-.impact-counter-section {
-    border: 1px solid #e9ecef;
-}
-
-/* The default REST state */
-.counter-box {
-    cursor: pointer;
-    padding: 15px 10px;
-    border-radius: 12px;
-    background-color: #ffffff; /* Starts White */
-    border: 1px solid #eaeaea;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
-}
-
-/* Text starts BLACK so you can read it on the white background */
-.counter-box h2,
-.counter-box p {
-    color: #000000 !important;
-    transition: color 0.5s ease;
-}
-
-/* Optional lift on hover before clicking */
-.counter-box:hover {
-    transform: translateY(-5px);
-}
-
-/* THE ACTIVE STATE (Turns Green!) */
-.counter-box.active {
-    background-color: #28a745 !important;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.2);
+.initiative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px#28a745;
     border-color: #28a745;
 }
 
-/* Text turns WHITE when the box becomes active (green) */
-.counter-box.active h2,
-.counter-box.active p {
-    color: #ffffff !important;
+/* Typography Inside Cards */
+.badge-tag {
+    display: inline-block;
+    background: rgba(0, 101, 255, 0.1);
+    color: #0065ff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-/* Smooth fade in when a tab is clicked */
-.tab-content-fade {
-    animation: fadeIn 0.5s ease-in-out;
+.card-heading {
+    color: #004ccb;
+    font-weight: 700;
+    font-size: 1.35rem;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card-subheading {
+    color: #28a745;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.highlight-text {
+    color: #28a745;
 }
 
 /* ========================================= */
-/* ------- 7. Conditionally Rendered Lists - */
+/* --- Tweaks for the Ritva "Super Card" --- */
 /* ========================================= */
 
-/* Changes the color of the individual item titles */
-.activities-list .card h6 {
-    color: #004ccb !important; /* Your requested dark blue */
+.ritva-hero-title {
+    font-size: 2.5rem !important; /* Larger font size but same color */
+}
+
+.ritva-hero-desc {
+    font-size: 1.1rem !important; /* Slightly larger paragraph text */
+    max-width: 850px;
+}
+
+.ritva-icon-accent {
+    border: 2px dashed #eaeaea; /* Light dashed border to look wholesome */
+    display: inline-block;
 }
 
 /* ========================================= */
 /* ========== RESPONSIVE DESIGN ============ */
 /* ========================================= */
 
-@media only screen and (max-width: 767px) {
-    .Initiatives {
-        padding-top: 40px;
-
-        .hint-text {
-            font-size: 1rem;
-        }
-
-        .initiative-cards {
-            height: 280px !important;
-            margin-bottom: 10px;
-
-            .initiative-card-wrapper {
-                img {
-                    width: 90vw;
-                    height: 180px !important;
-                }
-
-                &::after {
-                    content: "i";
-                    font-family: serif;
-                    font-weight: bold;
-                    font-style: italic;
-                    position: absolute;
-                    bottom: 10px;
-                    right: 10px;
-                    width: 30px;
-                    height: 30px;
-                    background: #28a745;
-                    color: white;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    animation: pulse-green 2s infinite;
-                    z-index: 15;
-                }
-            }
-        }
-
-        .initiative-details {
-            width: 95vw;
-        }
+@media (max-width: 768px) {
+    .clean-counter h2 {
+        font-size: 2.5rem;
     }
-
-    .counter-box {
-        padding: 10px 5px;
+    .ritva-hero-title {
+        font-size: 1.8rem !important;
     }
-
-    .counter-box h2 {
-        font-size: 2.2rem;
+    .ritva-hero-desc {
+        font-size: 1rem !important;
     }
+}
+/* ========================================= */
+/* --- Ritva Hover Expand Animation -------- */
+/* ========================================= */
 
-    .impact-counter-section .col-4 {
-        padding: 0 2px;
-    }
+.ritva-more-info {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    /* This creates the smooth sliding accordion effect */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When hovering over the ritva-super-card, expand the more-info box */
+.initiative-card.ritva-super-card:hover .ritva-more-info {
+    max-height: 1200px; /* Big enough to fit all the new text */
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+/* Ensures the bullets look nice and blue like the rest of the site */
+.colored-bullets li::marker {
+    color: #0065ff;
+    font-size: 1.1rem;
+}
+
+/* Optional: Slight shadow bump specific to the super card to make the hover feel more profound */
+.initiative-card.ritva-super-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 101, 255, 0.15);
 }
