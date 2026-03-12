@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/GITA/static/css/main.e8d12a0a.css",
-    "main.js": "/GITA/static/js/main.6b6fd47c.js",
-    "static/media/Space.mp4": "/GITA/static/media/Space.272c8a5b9a1f8ea28a74.mp4",
-    "static/media/page-header.jpg": "/GITA/static/media/page-header.dd2079149f342c5550b0.jpg",
-    "static/media/about.png": "/GITA/static/media/about.5ce3457faff33a982cc0.png",
-    "static/media/tanisha.png": "/GITA/static/media/tanisha.652c2134aa1cea24e55b.png",
-    "static/media/LandImg.png": "/GITA/static/media/LandImg.fda379d146296cb9501d.png",
-    "static/media/simran.png": "/GITA/static/media/simran.bd5eea7e76d806fcc0b9.png",
-    "static/media/logo.png": "/GITA/static/media/logo.5b5a194c87409cf310ad.png",
-    "static/media/rythm.png": "/GITA/static/media/rythm.587e762e75fce24cb6ce.png",
-    "static/media/vartika.png": "/GITA/static/media/vartika.2f25748a49736c61843f.png",
-    "static/media/bhanu.png": "/GITA/static/media/bhanu.c1e89145a112333d4689.png",
-    "static/media/sunrise.jpg": "/GITA/static/media/sunrise.dd82eb88a92f782bbe19.jpg",
-    "index.html": "/GITA/index.html",
-    "main.e8d12a0a.css.map": "/GITA/static/css/main.e8d12a0a.css.map",
-    "main.6b6fd47c.js.map": "/GITA/static/js/main.6b6fd47c.js.map"
+    "main.css": "/static/css/main.7d022434.css",
+    "main.js": "/static/js/main.eccb0a3a.js",
+    "static/media/Space.mp4": "/static/media/Space.272c8a5b9a1f8ea28a74.mp4",
+    "static/media/page-header.jpg": "/static/media/page-header.dd2079149f342c5550b0.jpg",
+    "static/media/about.png": "/static/media/about.5ce3457faff33a982cc0.png",
+    "static/media/tanisha.png": "/static/media/tanisha.652c2134aa1cea24e55b.png",
+    "static/media/LandImg.png": "/static/media/LandImg.fda379d146296cb9501d.png",
+    "static/media/simran.png": "/static/media/simran.bd5eea7e76d806fcc0b9.png",
+    "static/media/logo.png": "/static/media/logo.5b5a194c87409cf310ad.png",
+    "static/media/rythm.png": "/static/media/rythm.587e762e75fce24cb6ce.png",
+    "static/media/vartika.png": "/static/media/vartika.2f25748a49736c61843f.png",
+    "static/media/bhanu.png": "/static/media/bhanu.c1e89145a112333d4689.png",
+    "static/media/sunrise.jpg": "/static/media/sunrise.dd82eb88a92f782bbe19.jpg",
+    "index.html": "/index.html",
+    "main.7d022434.css.map": "/static/css/main.7d022434.css.map",
+    "main.eccb0a3a.js.map": "/static/js/main.eccb0a3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8d12a0a.css",
-    "static/js/main.6b6fd47c.js"
+    "static/css/main.7d022434.css",
+    "static/js/main.eccb0a3a.js"
   ]
 }
