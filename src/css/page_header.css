@@ -26,8 +26,6 @@
     z-index: 1; /* Puts it at the very bottom */
 }
 
-/* --- LAYER 2: The Overlay --- */
-
 /* --- LAYER 3: The Content --- */
 .header-content {
     position: relative;
@@ -42,6 +40,9 @@
     padding-bottom: 10px;
     position: relative;
     display: inline-block;
+
+    /* THE FIX: Adds a smooth, dark drop shadow to the text */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .page-header-wrapper h2::after {
@@ -52,6 +53,9 @@
     left: calc(50% - 50px);
     bottom: 0;
     background: #28a745;
+
+    /* Optional: You can also add a shadow to the green underline! */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* ========================================== */
