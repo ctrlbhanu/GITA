@@ -1,0 +1,88 @@
+/* Section Background */
+.about-full-section {
+    background: #ffffff;
+    min-height: 75vh;
+    color: #333333;
+}
+
+/* Image Frame */
+.about-img-frame {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #1f8737;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.about-img-frame img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Typography */
+.about-title {
+    color: #111111;
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: #28a745;
+}
+
+.about-subtitle {
+    color: #0065ff;
+    letter-spacing: 2px;
+}
+
+.about-text-lead {
+    color: #444444;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.about-text-body {
+    color: #666666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Vertical Content Box (BOX STYLING REMOVED) */
+.content-inner {
+    background: transparent; /* Made transparent */
+    border: none; /* Removed the line border */
+    /* Removed the border-radius as it is no longer needed without a background */
+}
+
+.text-success {
+    color: #28a745 !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.border-secondary {
+    border-color: #eaeaea !important;
+}
+
+/* Custom color for the bullet points */
+.colored-bullets li::marker {
+    color: #0065ff; /* Your theme's blue color */
+    font-size: 1.2rem; /* Optional: Makes the bullet just a tiny bit bigger/bolder */
+}
+/* ========================================= */
+/* --- iPAD / TABLET IMAGE HEIGHT FIX ------ */
+/* ========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-img-frame {
+        display: block !important;
+        height: 100% !important; /* Forces the frame to match the paragraph height */
+        width: 100%;
+    }
+
+    .about-img-frame img {
+        height: 100% !important; /* Forces the image to fill the new tall frame */
+        width: 100% !important;
+        max-height: none !important; /* Removes the 400px limit just for iPads */
+        object-fit: cover; /* Keeps the photo nicely cropped without squishing */
+    }
+}

@@ -1,0 +1,72 @@
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+
+.page-header-wrapper {
+    position: relative;
+    width: 100%;
+    /* Mobile Padding first */
+    padding: 150px 0 100px 0;
+    min-height: 350px;
+    overflow: hidden; /* Prevents the image from bleeding out */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- LAYER 1: The Image --- */
+.header-physical-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the <img> act exactly like a background */
+    object-position: center top; /* Keeps the faces visible on mobile! */
+    z-index: 1; /* Puts it at the very bottom */
+}
+
+/* --- LAYER 3: The Content --- */
+.header-content {
+    position: relative;
+    z-index: 3; /* Puts the text on top of the overlay */
+}
+
+.page-header-wrapper h2 {
+    color: #28a745;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+
+    /* THE FIX: Adds a smooth, dark drop shadow to the text */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.page-header-wrapper h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: #28a745;
+
+    /* Optional: You can also add a shadow to the green underline! */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================== */
+/* ========= DESKTOP RESPONSIVE ============= */
+/* ========================================== */
+
+@media (min-width: 992px) {
+    .page-header-wrapper {
+        padding: 210px 0 90px 0;
+    }
+    .page-header-wrapper h2 {
+        font-size: 60px;
+    }
+}

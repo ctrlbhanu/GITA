@@ -1,0 +1,145 @@
+.initiatives-page {
+    background-color: #ffffff;
+}
+
+/* Counters */
+.clean-counter h2 {
+    color: #0065ff;
+    font-size: 3.5rem;
+}
+
+.clean-counter p {
+    color: #444;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* ========================================= */
+/* --- Unified Card Design & Animation ----  */
+/* ========================================= */
+
+.initiative-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    /* Ensures images respect the border radius */
+    overflow: hidden;
+}
+
+.initiative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 150, 255, 0.2); /* Soft Blue Shadow */
+    border-color: #0065ff; /* Blue Border to match branding */
+}
+
+/* Card Image Styles for the bottom grid */
+.card-img-top {
+    width: 100%;
+    height: 220px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images aren't stretched weirdly */
+}
+
+/* Typography Inside Cards */
+.badge-tag {
+    display: inline-block;
+    background: rgba(0, 101, 255, 0.1);
+    color: #0065ff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-heading {
+    color: #004ccb;
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+
+.card-subheading {
+    color: #28a745;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.highlight-text {
+    color: #28a745;
+}
+
+/* ========================================= */
+/* --- Tweaks for the Ritva "Super Card" --- */
+/* ========================================= */
+
+.ritva-hero-title {
+    font-size: 2.5rem !important;
+}
+
+.ritva-hero-desc {
+    font-size: 1.1rem !important;
+    max-width: 850px;
+}
+
+/* Styling for the Super Card Image (The Poster) */
+.ritva-hero-img {
+    width: 100%;
+    height: 400px; /* Locks the height so it doesn't take over the screen */
+    object-fit: contain; /* MAGIC FIX: Shows the whole poster top-to-bottom! */
+    background-color: #fdfdfd; /* Matches the card background to blend in */
+    border-radius: 0;
+    padding-top: 20px; /* Gives the poster a little breathing room */
+}
+
+.ritva-icon-accent {
+    border: 2px dashed #eaeaea;
+    display: inline-block;
+}
+
+/* ========================================= */
+/* ========== RESPONSIVE DESIGN ============ */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    .clean-counter h2 {
+        font-size: 2.5rem;
+    }
+    .ritva-hero-title {
+        font-size: 1.8rem !important;
+    }
+    .ritva-hero-desc {
+        font-size: 1rem !important;
+    }
+}
+
+/* ========================================= */
+/* --- Ritva Hover Expand Animation -------- */
+/* ========================================= */
+
+.ritva-more-info {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.initiative-card.ritva-super-card:hover .ritva-more-info {
+    max-height: 1200px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.colored-bullets li::marker {
+    color: #0065ff;
+    font-size: 1.1rem;
+}
+
+.initiative-card.ritva-super-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 101, 255, 0.15);
+}

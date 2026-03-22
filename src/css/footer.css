@@ -1,0 +1,207 @@
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    /* 1. Force the footer to have zero top margin */
+    margin-top: 0;
+
+    /* 2. If the gap is still there, uncomment the line below to physically pull the footer up over the gap */
+    /* margin-top: -5px !important; */
+
+    padding-top: 50px;
+    background: #000e6e;
+    /* Upward shadow to distinguish from the body */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #ffffff;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* --- HOVER EFFECTS FOR ALL LINKS (Contact & Regular Links) --- */
+.footer .footer-link a,
+.footer .footer-contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* This adds the slide-right and yellow color effect */
+.footer .footer-link a:hover,
+.footer .footer-contact a:hover {
+    color: #28a745;
+    padding-left: 5px;
+}
+
+/* Prevents the 'p' tag from breaking the flex alignment */
+.footer .footer-contact a p {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Makes sure the icons turn yellow when the link is hovered */
+.footer .footer-contact a:hover i {
+    color: #28a745;
+    transition: 0.3s;
+}
+
+.footer .footer-contact i {
+    color: #ffffff;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center; /* Centers the icon in its dedicated width */
+}
+
+/* --- SOCIAL BUTTONS FIX --- */
+.footer .footer-social {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    width: 40px;
+    height: 40px;
+    /* Flexbox centers the icon perfectly inside the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 0 !important; /* Forces it to ignore any stray padding */
+}
+
+/* Make sure the i tag doesn't inherit margins from other elements */
+.footer .footer-social a i {
+    margin: 0;
+    width: auto;
+}
+
+.footer .footer-social a:hover {
+    background: #ffffff;
+    color: #28a745;
+
+    /* Stops the button from sliding right */
+    padding-left: 0 !important;
+
+    /* Sizes the button up anchored to the center */
+    transform: scale(1.15);
+
+    /* Adds a tiny shadow so it 'pops' off the green background when it grows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- COPYRIGHT BAR FIX --- */
+.footer .copyright {
+    padding: 25px 0;
+    /* Changed to match the main footer green */
+    background: #000e6e;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff; /* Forced to white */
+    font-size: 14px;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer .copyright p a:hover {
+    color: #28a745;
+}
+
+/* ========================================== */
+/* ========= MOBILE RESPONSIVE FIX ========== */
+/* ========================================== */
+
+@media (max-width: 767.98px) {
+    /* 1. Target ONLY the top container row, ignoring the copyright row */
+    .footer > .container:first-child > .row {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    /* 2. Force Contact Us & Popular Links to shrink and sit side-by-side */
+    .footer > .container:first-child > .row > div:nth-child(1),
+    .footer > .container:first-child > .row > div:nth-child(2) {
+        flex: 0 0 auto !important; /* Overpowers Bootstrap */
+        width: auto !important;
+        max-width: 48% !important;
+        padding: 0 5px !important;
+        text-align: left !important;
+    }
+
+    /* 3. Force Useful Links to drop below and center */
+    .footer > .container:first-child > .row > div:nth-child(3) {
+        flex: 0 0 100% !important; /* Overpowers Bootstrap */
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-top: 25px !important;
+    }
+
+    /* Centers the individual links inside the Useful Links section */
+    .footer > .container:first-child > .row > div:nth-child(3) .footer-link a {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 4. Shrink headers slightly */
+    .footer .footer-contact h2,
+    .footer .footer-link h2,
+    .footer .footer-newsletter h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    /* 5. Keep social icons under Contact Us */
+    .footer .footer-social {
+        justify-content: flex-start !important;
+    }
+
+    /* 6. Fix Copyright Centering */
+    .footer .copyright .row {
+        justify-content: center !important;
+    }
+
+    .footer .copyright .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .footer .copyright p {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}

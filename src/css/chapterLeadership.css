@@ -1,0 +1,114 @@
+.chapter-section {
+    padding: 60px 0;
+    background-color: transparent;
+}
+
+.chapter-content {
+    text-align: left;
+    padding-left: 0;
+    border-left: none;
+}
+
+.chapter-subtitle {
+    font-family: "Poppins", sans-serif;
+    color: #1f8737;
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+.chapter-title {
+    font-family: "Poppins", sans-serif;
+    color: #0065ff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.chapter-body-text {
+    width: 100%;
+    text-align: justify !important;
+    color: #444;
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+.chapter-body-text p {
+    margin-bottom: 20px;
+}
+
+.chapter-highlight {
+    color: #0065ff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.chapter-contact-footer {
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.chapter-contact-footer h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.chapter-btn {
+    font-family: "Poppins", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #1f8737;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+.chapter-btn:hover {
+    background-color: #004ccb;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.chapter-btn-alt {
+    font-family: "Poppins", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.chapter-btn-alt:hover {
+    background-color: #eeeeee;
+    color: #000;
+    border-color: #bbb;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .chapter-title {
+        font-size: 2rem;
+    }
+    .chapter-body-text {
+        text-align: left !important;
+        font-size: 1.1rem;
+    }
+    .chapter-btn,
+    .chapter-btn-alt {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,248 @@
+/**********************************/
+/********** Landing CSS ***********/
+/**********************************/
+
+.landing {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 600px; /* Use min-height so it can grow on mobile */
+    background: #ffffff;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.left hr {
+    background-color: #0065ff;
+    border: 1px solid #0065ff;
+    height: 1px;
+    margin-right: 0.5em;
+    width: 60%;
+}
+
+.left h4 {
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #28a745;
+}
+
+.left .titles {
+    max-width: 700px;
+    margin-left: 80px;
+    margin-top: 7rem;
+}
+
+.left .caption1 {
+    display: flex;
+    align-items: center;
+}
+
+.left .caption2 p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.left .caption2 p span {
+    color: #28a745;
+}
+
+.left .caption3 {
+    max-width: 450px;
+}
+
+.left .caption3 p {
+    font-size: 1.25rem;
+    font-weight: 200;
+    font-style: oblique 40deg;
+    color: black;
+}
+
+.left .btns {
+    display: flex;
+    justify-content: flex-start; /* Aligns the button to the left */
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* --- THE MERGED BUTTON (Rest State) --- */
+.left .btns .btn-outline-info {
+    color: #0065ff;
+    border: 2px solid #0065ff; /* Added explicit border */
+    background-color: transparent;
+    border-radius: 5px;
+
+    /* Size and Typography */
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* Matched the speed to your guidance button */
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- THE MERGED BUTTON (Hover State) --- */
+.left .btns .btn-outline-info:hover {
+    background-color: #28a745 !important; /* Turns green */
+    border-color: #28a745 !important; /* Border matches background */
+    color: #ffffff !important; /* Text turns white */
+
+    /* The slide right effect */
+    transform: translateX(5px);
+
+    /* Removes the old green glow */
+    box-shadow: none;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right img {
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
+    /* THIS IS THE FIX FOR THE WHITE GAP */
+    display: block;
+}
+
+/* ========================================= */
+/* --- Clean Impact Counter (Landing) ---    */
+/* ========================================= */
+
+.clean-counter {
+    padding: 20px 10px;
+}
+
+.clean-counter h2 {
+    color: #28a745 !important; /* Your brand blue */
+    font-size: 3rem; /* Made the numbers huge so they pop */
+    letter-spacing: -2px; /* Pulls the numbers slightly closer together */
+}
+
+.clean-counter p {
+    color: #444444 !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family:
+        "Quicksand", sans-serif; /* Spreads the text out for a premium look */
+}
+
+/**********************************/
+/********** Responsive ************/
+/**********************************/
+
+@media (max-width: 767.98px) {
+    .landing {
+        /* THIS IS THE FIX: Stacks items vertically but puts the bottom item (.right img) on top! */
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    /* Add a little padding to the top of the text so it isn't touching the image */
+    .left {
+        padding-top: 30px !important;
+    }
+
+    .left .titles {
+        margin-left: 5px;
+        margin-top: 1rem;
+    }
+
+    .left hr {
+        width: 20%;
+    }
+
+    /* ... Keep the rest of your mobile CSS exactly the same ... */
+
+    .left .caption2 p {
+        font-size: 1.5rem;
+    }
+
+    .left .caption3 p {
+        font-size: 0.85rem;
+    }
+
+    /* Keeps the button large on mobile */
+    .left .btns .btn-outline-info {
+        padding: 14px 35px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .right img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* --- Mobile Adjustments for Clean Counters --- */
+    .clean-counter {
+        padding: 10px 0;
+    }
+
+    .clean-counter h2 {
+        font-size: 3rem !important; /* Scales down smoothly for phones */
+    }
+
+    .clean-counter p {
+        font-size: 0.85rem !important;
+        letter-spacing: 1px;
+    }
+}
+/* ========================================= */
+/* --- iPAD / TABLET SIDE-BY-SIDE FIX ------ */
+/* ========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .landing {
+        display: flex !important;
+        flex-direction: row !important; /* Forces the layout to stay side-by-side */
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 30px; /* Gives breathing room on the edges of the iPad */
+        overflow: hidden;
+    }
+
+    /* Restrict left text box to exactly half the screen */
+    .landing .left {
+        width: 50% !important;
+        padding-right: 20px;
+        margin-top: 0;
+    }
+
+    /* Restrict right image box to exactly half the screen */
+    .landing .right {
+        width: 50% !important;
+        display: flex;
+        justify-content: flex-end; /* Pushes image neatly to the right */
+        align-items: center;
+    }
+
+    .landing .right img {
+        width: 100%;
+        max-width: 400px; /* Stops the image from getting too massive */
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Scale down the massive desktop text so it actually fits on the iPad */
+    .landing .left .caption2 p {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px;
+    }
+
+    .landing .left .caption3 p {
+        font-size: 1.1rem !important;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+}
