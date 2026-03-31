@@ -112,3 +112,17 @@
         justify-content: center;
     }
 }
+
+/* Add this to your chapterLeadership.css if it isn't there already! */
+.form-roll-down {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-roll-down.visible {
+    max-height: 4000px; /* Must be larger than the iframe height */
+    opacity: 1;
+    margin-top: 2rem;
+}

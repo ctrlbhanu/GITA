@@ -86,3 +86,112 @@
         object-fit: cover; /* Keeps the photo nicely cropped without squishing */
     }
 }
+/* ========================================= */
+/* --- STRATEGIC PRIORITY CARDS (SDG UI) --- */
+/* ========================================= */
+
+.priority-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* 1. The Half-and-Half Glowing Dual Shadow */
+.priority-card:hover {
+    transform: translateY(-8px);
+    border-color: transparent; /* Hides original border */
+    /* Left side glows Color 1, Right side glows Color 2! */
+    box-shadow:
+        -15px 15px 30px var(--c1-shadow),
+        15px 15px 30px var(--c2-shadow);
+}
+
+/* 2. The Split-Color Border on Hover */
+.priority-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px; /* Thickness of the gradient border */
+    background: linear-gradient(to right, var(--c1) 50%, var(--c2) 50%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.priority-card:hover::after {
+    opacity: 1;
+}
+
+/* 3. The Half-and-Half SDG Pill Badge */
+.sdg-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    /* Hard-stop gradient at exactly 50% for the split effect */
+    background: linear-gradient(to right, var(--c1) 50%, var(--c2) 50%);
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Icon Box Styles */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    /* Paints the icon itself with the split colors */
+    background-image: linear-gradient(to right, var(--c1) 50%, var(--c2) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+/* Fills the box with the split colors on hover */
+.priority-card:hover .icon-box {
+    background: linear-gradient(to right, var(--c1) 50%, var(--c2) 50%);
+    -webkit-text-fill-color: #ffffff;
+    border-color: transparent;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* 5. Title Text turns into Word-by-Word Color on Hover */
+.priority-title {
+    color: #111111; /* Keeps it black by default */
+}
+
+.title-word-1,
+.title-word-2 {
+    transition: color 0.3s ease;
+}
+
+/* Word 1 turns to Color 1 */
+.priority-card:hover .title-word-1 {
+    color: var(--c1);
+}
+
+/* Word 2 turns to Color 2 */
+.priority-card:hover .title-word-2 {
+    color: var(--c2);
+}

@@ -19,7 +19,7 @@ import youthLeadershipImg from "../assets/Initiatives/Youth Leadership.jpg";
 import freesunday from "../assets/Initiatives/Plastic Free Sunday Fellowship.jpg";
 import riturja from "../assets/Initiatives/Riturja.jpg";
 import yoga from "../assets/Initiatives/yoga.jpg";
-
+import mands from "../assets/Initiatives/mands.jpg";
 const initiatives = [
   {
     id: 1,
@@ -132,6 +132,14 @@ const initiatives = [
     desc: "A dedicated menstrual health awareness session conducted by Dr. Tanya for young girls in residential care.",
     tag: "Community",
     image: salaamBalakImg,
+  },
+  {
+    id: 15,
+    title: "Body positivity session with Marks & Spencer",
+    subtitle: "Marks & Spencer and Girl Up Astitva",
+    desc: "A body positivity and self-care session with Marks & Spencer and Girl Up Astitva, featuring a free expert-led bra-fitting experience for participants.",
+    tag: "Awareness",
+    image: mands,
   },
 ];
 
