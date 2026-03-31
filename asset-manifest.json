@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0dedcb03.css",
-    "main.js": "/static/js/main.2e2cd400.js",
+    "main.css": "/static/css/main.58c8d8f1.css",
+    "main.js": "/static/js/main.af3f12ba.js",
     "static/media/Space.mp4": "/static/media/Space.272c8a5b9a1f8ea28a74.mp4",
     "static/media/Ritva.png": "/static/media/Ritva.0ad4a36a793caa2d1326.png",
     "static/media/Space.webm": "/static/media/Space.94e0de6075e118e5eda8.webm",
@@ -11,7 +11,6 @@
     "static/media/about.png": "/static/media/about.5ce3457faff33a982cc0.png",
     "static/media/Good Touch Bad Touch.jpg": "/static/media/Good Touch Bad Touch.fdfe8f5690bf97067b52.jpg",
     "static/media/Not a Victim but a Survivor.jpg": "/static/media/Not a Victim but a Survivor.35f42a3f0272ff23aa82.jpg",
-    "static/media/tanisha.png": "/static/media/tanisha.652c2134aa1cea24e55b.png",
     "static/media/LandImg.png": "/static/media/LandImg.fda379d146296cb9501d.png",
     "static/media/Saeif.jpg": "/static/media/Saeif.1b19b53a852054c07bf2.jpg",
     "static/media/Inspire India.jpg": "/static/media/Inspire India.39e1977ad300b8c257d2.jpg",
@@ -21,19 +20,21 @@
     "static/media/Cycle of Dignity Campaign.jpg": "/static/media/Cycle of Dignity Campaign.9abe6e95b1b3a00f2f97.jpg",
     "static/media/simran.png": "/static/media/simran.bd5eea7e76d806fcc0b9.png",
     "static/media/Salaam Balak Trust.jpg": "/static/media/Salaam Balak Trust.9aebe89f16872f64251d.jpg",
+    "static/media/tanisha.png": "/static/media/tanisha.6063898ca7b488640665.png",
     "static/media/logo.png": "/static/media/logo.5b5a194c87409cf310ad.png",
     "static/media/Red Drop Event.jpg": "/static/media/Red Drop Event.5b244dbb7a381224c5a6.jpg",
     "static/media/rythm.png": "/static/media/rythm.587e762e75fce24cb6ce.png",
     "static/media/vartika.png": "/static/media/vartika.2f25748a49736c61843f.png",
     "static/media/bhanu.png": "/static/media/bhanu.c1e89145a112333d4689.png",
+    "static/media/mands.jpg": "/static/media/mands.aa0b5aba153c5a6676b7.jpg",
     "static/media/Riturja.jpg": "/static/media/Riturja.6434031aeeb281aac87a.jpg",
     "static/media/Plastic Free Sunday Fellowship.jpg": "/static/media/Plastic Free Sunday Fellowship.6e99b58b705687deaf6e.jpg",
     "index.html": "/index.html",
-    "main.0dedcb03.css.map": "/static/css/main.0dedcb03.css.map",
-    "main.2e2cd400.js.map": "/static/js/main.2e2cd400.js.map"
+    "main.58c8d8f1.css.map": "/static/css/main.58c8d8f1.css.map",
+    "main.af3f12ba.js.map": "/static/js/main.af3f12ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dedcb03.css",
-    "static/js/main.2e2cd400.js"
+    "static/css/main.58c8d8f1.css",
+    "static/js/main.af3f12ba.js"
   ]
 }
