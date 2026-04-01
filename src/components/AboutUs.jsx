@@ -126,14 +126,14 @@ export default function AboutUs() {
               </h2>
               <p className="about-text-body">
                 Our founder believed that real change begins with individual
-                action. With this conviction, she started Ritva—an initiative
+                action. With this conviction, she started Ritva, an initiative
                 dedicated to advancing sustainable menstrual hygiene and
                 fostering open, informed conversations around it. As the work
                 grew, so did the understanding that challenges in menstrual
                 health were deeply connected to larger issues of awareness,
                 access, education, and dignity. What began as a focused effort
                 soon expanded into a broader mission. To reflect this evolution,
-                Ritva grew into GITA—a platform with a wider vision and deeper
+                Ritva grew into GITA, a platform with a wider vision and deeper
                 commitment to holistic, community-driven change. Today, GITA
                 continues to build on its origins, working towards creating
                 inclusive, informed, and empowered communities through sustained
