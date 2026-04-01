@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.58c8d8f1.css",
-    "main.js": "/static/js/main.af3f12ba.js",
+    "main.js": "/static/js/main.01bf1edb.js",
     "static/media/Space.mp4": "/static/media/Space.272c8a5b9a1f8ea28a74.mp4",
     "static/media/Ritva.png": "/static/media/Ritva.0ad4a36a793caa2d1326.png",
     "static/media/Space.webm": "/static/media/Space.94e0de6075e118e5eda8.webm",
@@ -31,10 +31,10 @@
     "static/media/Plastic Free Sunday Fellowship.jpg": "/static/media/Plastic Free Sunday Fellowship.6e99b58b705687deaf6e.jpg",
     "index.html": "/index.html",
     "main.58c8d8f1.css.map": "/static/css/main.58c8d8f1.css.map",
-    "main.af3f12ba.js.map": "/static/js/main.af3f12ba.js.map"
+    "main.01bf1edb.js.map": "/static/js/main.01bf1edb.js.map"
   },
   "entrypoints": [
     "static/css/main.58c8d8f1.css",
-    "static/js/main.af3f12ba.js"
+    "static/js/main.01bf1edb.js"
   ]
 }
